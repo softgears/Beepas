@@ -1,0 +1,188 @@
+﻿@using Beepas.Web.Classes.Extension
+@using Beepas.Web.Classes.IoC
+@using Beepas.Web.Classes.Managers
+@{
+    Layout = null;
+    var usersManager = Locator.GetService<UsersManager>();
+    var moneyManager = Locator.GetService<MoneyManager>();
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=1280px" />
+    <title>@ViewBag.Title | Beepas.ru</title>
+    @Html.Partial("Includes")
+</head>
+<body>
+    <div>
+        @* Шапка *@
+        <header id="header">
+            <div id="header-content">
+                @* Пчелка *@
+                <div id="top-bee">
+                    
+                </div>
+                @* Улей *@
+                <div id="top-uley" class="active">
+                    
+                </div>
+                @* Количество игроков *@
+                <div id="players-callout">
+                    <div class="value">
+                        @usersManager.PlayersCount
+                    </div>
+                </div>
+                @* Количество золота *@
+                <div id="bank-callout">
+                    <div class="value">
+                        @moneyManager.GetGameBank().ToString("0.0")
+                    </div>
+                </div>
+                @* Главное меню *@
+                <nav id="main-menu">
+                    <ul>
+                        @if (!ViewContext.IsAuthentificated())
+                        {
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        }
+                        <li>
+                            <a href="/rules">Правила</a>
+                        </li>
+                        <li>
+                            <a href="/faq">F.A.Q.</a>
+                        </li>
+                        <li>
+                            <a href="/stats">Статистика</a>
+                        </li>
+                        <li>
+                            <a href="/chat">Чат</a>
+                        </li>
+                        <li>
+                            <a href="/news">Новости</a>
+                        </li>
+                        <li>
+                            <a href="/support">Поддержка</a>
+                        </li>
+                    </ul>
+                </nav>
+                @if (!ViewContext.IsAuthentificated())
+                {
+                @* Кнопка входа *@
+                    <div id="login-button" onclick=" showLoginDialog(); ">
+                    
+                    </div>
+                }
+                else
+                {
+                @* Кнопка выхода *@
+                <div id="logout-button" onclick="window.location.href='/account/logout'">
+                    
+                </div>
+                @* Кнопка пополнения счета *@
+                <div id="money-button" onclick="window.location.href='/account/add-balance'">
+                    
+                </div>    
+                }
+            </div>
+        </header>
+        @* Содержимое *@
+        <div id="content">
+            <div id="content-wrapper">
+                <div id="content-inner">
+                    <div id="content-holder">
+                        @RenderBody()    
+                    </div>
+                    @if (ViewContext.IsAuthentificated())
+                    {
+                    <div id="account-block">
+                        @Html.Partial("AccountBlock")
+                    </div>    
+                    }
+                </div>
+            </div>
+        </div>
+        @* Подвал *@
+        <footer id="footer">
+            <div id="copyrights">
+                Beepas.ru (c) 2013
+            </div>
+        </footer>
+        @* Фон для диалогов *@
+        <div id="dialog-overlay">
+            
+        </div>
+        @* Диалог логина *@
+        <div id="login-dialog">
+            <div id="login-wrapper">
+                <div class="title">
+                    Авторизация в системе BEEPAS
+                </div>
+                <div class="social">
+                    <script src="//ulogin.ru/js/ulogin.js"></script>
+                    <div id="uLogin" data-ulogin="display=small;fields=first_name,last_name,email,photo,photo_big;providers=vkontakte,odnoklassniki,mailru,facebook;hidden=other;redirect_uri=http%3A%2F%2Fbeepas.ru%2Faccount%2Flogin-social"></div>
+                </div>
+                <form action="/account/login" method="POST" id="login-form">
+                    <div class="field">
+                        <div class="editor">
+                            <input type="text" name="Login" id="login-field" placeholder="Логин"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="editor">
+                            <input type="password" name="Password" id="password-field" placeholder="Пароль"/>
+                        </div>
+                    </div>
+                    <div class="field">
+                        <div class="editor">
+                            @Html.CheckBox("RememberMe") Запомнить меня
+                        </div>
+                    </div>
+                    <input type="submit" id="login-action" value=" "/> <span class="register-action" onclick="window.location.href='/account/register'"></span>
+                </form>
+                <div id="restore-wrapper">
+                    <a href="/account/forgot">Восстановить пароль</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#top-uley").click(function () {
+                var self = $(this);
+                if (!$(this).hasClass("active")) {
+                    $("#bank-callout").stop(true, true).fadeIn("slow", function() {
+                        $("#players-callout").stop(true, true).fadeIn("slow", function() {
+                            $(self).addClass("active");
+                        });
+                    });
+                } else {
+                    $("#players-callout").stop(true, true).fadeOut("slow", function () {
+                        $("#bank-callout").stop(true, true).fadeOut("slow", function () {
+                            $(self).removeClass("active");
+                        });
+                    });
+                }
+            });
+        });
+
+        // Диалог логина
+        function showLoginDialog() {
+            var dlg = $("#login-dialog");
+            var overlay = $("#dialog-overlay");
+            overlay.width($(document).width()).height($(document).height()).show().unbind("click").click(function () {
+                overlay.hide();
+                dlg.hide();
+            });
+            dlg.find(".dialog-close").bind("click", function () {
+                overlay.hide();
+                dlg.hide();
+            });
+            dlg.css("left", window.innerWidth / 2 - dlg.width() / 2).css("top", window.innerHeight / 2 - dlg.height() / 2).show();
+        }
+    </script>
+</body>
+</html>

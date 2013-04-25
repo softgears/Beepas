@@ -1,0 +1,87 @@
+﻿@using Beepas.Web.Classes.Enums
+@model IList<Beepas.Web.Classes.Entities.Transport>
+
+@{
+    ViewBag.Title = "Транспортные средства";
+    Layout = "ApiaryLayout.cshtml";
+}
+
+<table class="system">
+    <thead>
+        <tr>
+            <th>
+                ИД
+            </th>
+            <th>
+                Уровень
+            </th>
+            <th>
+                Меда
+            </th>
+            <th>
+                Вместимость
+            </th>
+            <th>
+                Свободно
+            </th>
+            <th>
+                Статус
+            </th>
+            <th>
+                До завершения
+            </th>
+            <th>
+                Действия
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            foreach (var transport in Model)
+            {
+                <tr>
+                    <td>
+                        @transport.Id
+                    </td>
+                    <td>
+                        @transport.TransportType.Level
+                    </td>
+                    <td>
+                        @transport.CurrentHoney.ToString("0")
+                    </td>
+                    <td>
+                        @transport.TransportType.Capacity.ToString("0")
+                    </td>
+                    <td>
+                        @((transport.TransportType.Capacity - transport.CurrentHoney).ToString("0"))
+                    </td>
+                    <td>
+                        @(((TransportStatus)transport.Status).GetEnumMemberName())
+                    </td>
+                    <td>
+                        
+                    </td>
+                    <td>
+                        @if (transport.Status == (short) TransportStatus.Waiting)
+                        {
+                            <a href='/apiary/transport/upgrade/@transport.Id'>Улучшить</a><br/>
+                            <a href='/apiary/transport/load/@transport.Id'>Загрузить</a><br/>
+                            <a href='/apiary/transport/send-to-stock/@transport.Id'>Отправить на биржу</a><br/>
+                        }
+                        @if (transport.Status == (short) TransportStatus.OnStocks)
+                        {
+                            <a href='/apiary/transport/send-to-home/@transport.Id'>Отправить домой</a>
+                        }
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td align="center" colspan="8">Нет транспортных средств</td>
+            </tr>
+        }
+    </tbody>
+</table>

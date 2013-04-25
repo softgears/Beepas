@@ -1,0 +1,128 @@
+﻿@using Beepas.Web.Classes.Extension
+@model dynamic
+
+@{
+    Layout = "ApiaryLayout.cshtml";
+    ViewBag.Title = "Производство";
+    var current = ViewContext.CurrentUser();
+}
+
+@* Ульи *@
+<div class="group" onclick="window.location.href='/apiary/hives'">
+    <div class="title">
+        Пасека
+    </div>
+    <div class="count">
+        Ульев: [@current.GetHivesCount()]
+    </div>
+    <div class="image">
+        <img src="/Content/images/apiary/hives/level1.png" />
+    </div>
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-title">
+                Всего меда в ульях:
+            </div>
+            <div class="stat-value">
+                @current.GetTotalHivesHoney().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Свободного места в ульях:
+            </div>
+            <div class="stat-value">
+                @current.GetAvailableHivesSpace().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Производительность пасеки:
+            </div>
+            <div class="stat-value">
+                @current.GetTotalProductionRate().ToString("0")
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Склад *@
+<div class="group" onclick="window.location.href='/apiary/warehouses'">
+    <div class="title">
+        Склад
+    </div>
+    <div class="count">
+        Складов: [@current.GetWarehousesCount()]
+    </div>
+    <div class="image">
+        <img src="/Content/images/apiary/warehouses/level2.png" />
+    </div>
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-title">
+                Всего меда на складах:
+            </div>
+            <div class="stat-value">
+                @current.GetTotalWarehousesHoney().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Общая вместимость складов:
+            </div>
+            <div class="stat-value">
+                @current.GetTotalWarehousesSpace().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Свободного места на складах:
+            </div>
+            <div class="stat-value">
+                @current.GetAvailableWarehousesSpace().ToString("0")
+            </div>
+        </div>
+    </div>
+</div>
+
+@* Транспорт *@
+<div class="group" onclick="window.location.href='/apiary/transport'">
+    <div class="title">
+        Транспорт
+    </div>
+    <div class="count">
+        Транспортных средств: [@current.GetTransportsCount()]
+    </div>
+    <div class="image" style="padding-top: 25px">
+        <img src="/Content/images/apiary/transports/level2.png" />
+    </div>
+    <div class="stats">
+        <div class="stat-item">
+            <div class="stat-title">
+                Доступно под загрузку:
+            </div>
+            <div class="stat-value">
+                @current.GetAvailableTransportsSpace().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Общая грузовместимость:
+            </div>
+            <div class="stat-value">
+                @current.GetTotalTransportsSpace().ToString("0")
+            </div>
+        </div>
+        <div class="stat-item">
+            <div class="stat-title">
+                Объем меда в пути:
+            </div>
+            <div class="stat-value">
+                @current.GetTransportsInTrafficHoney().ToString("0")
+            </div>
+        </div>
+    </div>
+</div>
+
+
+

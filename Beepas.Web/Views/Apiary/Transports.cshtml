@@ -1,0 +1,30 @@
+﻿@using Beepas.Web.Classes.Enums
+@model Beepas.Web.Classes.Entities.Transport
+
+
+<div class="warehouse" data-id="@Model.Id">
+    <a name="@Model.Id"></a>
+    <div class="image">
+        @if (Model.Status != (short)TransportStatus.OnTheWay && Model.Status != (short)TransportStatus.OnTheWayBack)
+        {
+            <img src="/Content/images/apiary/transports/@Model.TransportType.Image/normal.png"/>
+        }
+        else
+        {
+            <img src="/Content/images/apiary/transports/@Model.TransportType.Image/ontheway.png"/>
+        }
+    </div>
+    <div class="upgrade" title="Улучшить" onclick="window.location.href='/apiary/transport/upgrade/@Model.Id'">Уровень @Model.TransportType.Level</div>
+    <div class="title">
+        Транспорт [ <span class="capacity">@Model.TransportType.Capacity.ToString("0") L</span> ]
+    </div>
+    <div class="details">
+        <div class="content">
+            Доступно места: <div class="progress-wrapper">
+                             <div class="fill-progress" style="width: @Model.FillPercentage"></div>
+                             <div class="content-label">@((Model.TransportType.Capacity-Model.CurrentHoney).ToString("0"))</div>
+                         </div>
+        </div>
+        <div></div>
+    </div>
+</div>

@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="Beepas" EntityNamespace="Beepas.Web.Classes.Entities" ContextNamespace="Beepas.Web.Classes.DAL" Class="BeepasDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.WarehouseTypes" Member="WarehouseTypes">
+    <Type Name="WarehouseType">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="LoadingRate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CanBuy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="WarehouseType_Warehouse" Member="Warehouses" ThisKey="Id" OtherKey="WarehouseTypeId" Type="Warehouse" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GoldCoinsPayments" Member="GoldCoinsPayments">
+    <Type Name="GoldCoinsPayment">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_GoldCoinsPayment" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Hives" Member="Hives">
+    <Type Name="Hive">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="HiveTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CurrentHoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="OperationStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OperationEndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="HasAutoCollector" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Hive_AutoCollector" Member="AutoCollectors" ThisKey="Id" OtherKey="HiveId" Type="AutoCollector" Cardinality="One" />
+      <Association Name="HiveType_Hive" Member="HiveType" ThisKey="HiveTypeId" OtherKey="Id" Type="HiveType" IsForeignKey="true" />
+      <Association Name="User_Hive" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.HiveTypes" Member="HiveTypes">
+    <Type Name="HiveType">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="ProductionRate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="CanBuy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="HiveType_Hive" Member="Hives" ThisKey="Id" OtherKey="HiveTypeId" Type="Hive" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Transports" Member="Transports">
+    <Type Name="Transport">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="TransportTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CurrentHoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="OperationStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OperationEndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="TransportType_Transport" Member="TransportType" ThisKey="TransportTypeId" OtherKey="Id" Type="TransportType" IsForeignKey="true" />
+      <Association Name="User_Transport" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TransportTypes" Member="TransportTypes">
+    <Type Name="TransportType">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Image" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="Price" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Capacity" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="SpeedRate" Type="System.Double" DbType="Float NOT NULL" CanBeNull="false" />
+      <Column Name="CanBuy" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Association Name="TransportType_Transport" Member="Transports" ThisKey="Id" OtherKey="TransportTypeId" Type="Transport" />
+    </Type>
+  </Table>
+  <Table Name="dbo.UserLoginHistory" Member="UserLoginHistories">
+    <Type Name="UserLoginHistory">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="LoginDateTime" Type="System.DateTime" DbType="DateTime NOT NULL" CanBeNull="false" />
+      <Column Name="LoginIP" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_UserLoginHistory" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Warehouses" Member="Warehouses">
+    <Type Name="Warehouse">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="WarehouseTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Notes" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CurrentHoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="OperationStartTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="OperationEndTime" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="WarehouseType_Warehouse" Member="WarehouseType" ThisKey="WarehouseTypeId" OtherKey="Id" Type="WarehouseType" IsForeignKey="true" />
+      <Association Name="User_Warehouse" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Users" Member="Users">
+    <Type Name="User">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="Login" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="PasswordHash" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="LoginProvider" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="FirstName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="LastName" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Email" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="CellPhone" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="AvatarUrl" Type="System.String" DbType="NVarChar(MAX)" CanBeNull="true" />
+      <Column Name="ReferalId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Status" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="AccountLevel" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Birthdate" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="City" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="IsAdmin" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="TotalHoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Rank" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="DateRegistred" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateModified" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_GoldCoinsPayment" Member="GoldCoinsPayments" ThisKey="Id" OtherKey="UserId" Type="GoldCoinsPayment" />
+      <Association Name="User_Hive" Member="Hives" ThisKey="Id" OtherKey="UserId" Type="Hive" />
+      <Association Name="User_Transport" Member="Transports" ThisKey="Id" OtherKey="UserId" Type="Transport" />
+      <Association Name="User_UserLoginHistory" Member="UserLoginHistories" ThisKey="Id" OtherKey="UserId" Type="UserLoginHistory" />
+      <Association Name="User_Warehouse" Member="Warehouses" ThisKey="Id" OtherKey="UserId" Type="Warehouse" />
+      <Association Name="User_User" Member="Refferers" ThisKey="Id" OtherKey="ReferalId" Type="User" />
+      <Association Name="User_GoldBarsPayment" Member="GoldBarsPayments" ThisKey="Id" OtherKey="UserId" Type="GoldBarsPayment" />
+      <Association Name="User_User" Member="Refferer" ThisKey="ReferalId" OtherKey="Id" Type="User" IsForeignKey="true" />
+      <Association Name="Rank_User" Member="UserRank" ThisKey="Rank" OtherKey="Id" Type="Rank" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.GoldBarsPayments" Member="GoldBarsPayments">
+    <Type Name="GoldBarsPayment">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="UserId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="Direction" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="Amount" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="Description" Type="System.String" DbType="NVarChar(255)" CanBeNull="true" />
+      <Column Name="Completed" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="Appointment" Type="System.Int16" DbType="SmallInt NOT NULL" CanBeNull="false" />
+      <Column Name="DateCreated" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="DateCompleted" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="User_GoldBarsPayment" Member="User" ThisKey="UserId" OtherKey="Id" Type="User" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Ranks" Member="Ranks">
+    <Type Name="Rank">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Title" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="RequiredHoney" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="Rank_User" Member="Users" ThisKey="Id" OtherKey="Rank" Type="User" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AutoCollectors" Member="AutoCollectors">
+    <Type Name="AutoCollector">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="HiveId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="AutoCollectorTypeId" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="CollectedToday" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DateBuyed" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Column Name="Expiration" Type="System.DateTime" DbType="DateTime" CanBeNull="true" />
+      <Association Name="Hive_AutoCollector" Member="Hive" ThisKey="HiveId" OtherKey="Id" Type="Hive" IsForeignKey="true" DeleteRule="CASCADE" DeleteOnNull="true" />
+      <Association Name="AutoCollectorType_AutoCollector" Member="AutoCollectorType" ThisKey="AutoCollectorTypeId" OtherKey="Id" Type="AutoCollectorType" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.AutoCollectorTypes" Member="AutoCollectorTypes">
+    <Type Name="AutoCollectorType">
+      <Column Name="Id" Type="System.Int64" DbType="BigInt NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="[Level]" Member="Level" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="DailyRate" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="DayPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="WeekPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Column Name="MonthPrice" Type="System.Decimal" DbType="Money NOT NULL" CanBeNull="false" />
+      <Association Name="AutoCollectorType_AutoCollector" Member="AutoCollectors" ThisKey="Id" OtherKey="AutoCollectorTypeId" Type="AutoCollector" />
+    </Type>
+  </Table>
+</Database>

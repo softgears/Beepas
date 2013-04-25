@@ -1,0 +1,59 @@
+﻿@model IList<Beepas.Web.Classes.Entities.Warehouse>
+
+@{
+    ViewBag.Title = "Склады";
+    Layout = "ApiaryLayout.cshtml";
+}
+
+<table class="system">
+    <thead>
+        <tr>
+            <th>ИД
+            </th>
+            <th>Уровень
+            </th>
+            <th>Меда
+            </th>
+            <th>Вместимость
+            </th>
+            <th>Свободно
+            </th>
+            <th>Действия
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @if (Model.Count > 0)
+        {
+            foreach (var warehouse in Model)
+            {
+                <tr>
+                    <td>
+                        @warehouse.Id
+                    </td>
+                    <td>
+                        @warehouse.WarehouseType.Level
+                    </td>
+                    <td>
+                        @warehouse.CurrentHoney.ToString("0")
+                    </td>
+                    <td>
+                        @warehouse.WarehouseType.Capacity.ToString("0")
+                    </td>
+                    <td>
+                        @((warehouse.WarehouseType.Capacity - warehouse.CurrentHoney).ToString("0"))
+                    </td>
+                    <td>
+                        <a href="/apiary/warehouse/upgrade/@warehouse.Id">Улучшить</a>
+                    </td>
+                </tr>
+            }
+        }
+        else
+        {
+            <tr>
+                <td align="center" colspan="6">Нет складов</td>
+            </tr>
+        }
+    </tbody>
+</table>

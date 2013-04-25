@@ -1,0 +1,13 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div id="page-static">
+    <div id="page-title">
+        @ViewBag.Title 
+        @RenderSection("PageTitle",false)
+    </div>
+    <div class="page-content">
+        @RenderBody()
+    </div>
+</div>

@@ -1,0 +1,26 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Магазин пасечника";
+    Layout = "../Shared/CommonLayout.cshtml";
+}
+<div id="page-shop">
+    <div class="info">В данном разделе вы можете приобрести улья, склады и транспортные средства</div>
+    <ul>
+        <li>
+            <a href='/account/shop/buy-hive'>Купить новый улей (3000 монет)</a>
+        </li>
+        <li>
+            <a href='/account/shop/buy-warehouse'>Купить новый склад (500 монет)</a>
+        </li>
+        <li>
+            <a href='/account/shop/buy-transport'>Купить новый транспорт (500 монет)</a>
+        </li>
+    </ul>
+</div>
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $("#shop-menu-item").addClass("active");
+    });
+</script>

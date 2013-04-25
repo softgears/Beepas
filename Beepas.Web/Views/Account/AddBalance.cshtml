@@ -1,0 +1,20 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Пополнение баланса";
+    Layout = "../Shared/CommonLayout.cshtml";
+}
+<div id="page-shop">
+    <div class="info">В данном разделе вы можете пополнить свой баланс</div>
+    <ul>
+        <li>
+            <a href='/account/add-balance/debug'>Пополнить свой баланс на 10000 монет</a>
+        </li>
+    </ul>
+</div>
+
+<script type='text/javascript'>
+    $(document).ready(function () {
+        $("#shop-menu-item").addClass("active");
+    });
+</script>

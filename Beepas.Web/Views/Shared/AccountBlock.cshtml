@@ -1,0 +1,57 @@
+﻿@using Beepas.Web.Classes.Extension
+@model dynamic
+@{
+    var user = ViewContext.CurrentUser();
+}
+<div id="account">
+    <div style="text-align: right">
+        <span id="profile-card" title="Профиль"></span>
+        <span id="profile-settings" title="Настройки"></span>
+    </div>
+    <div class="login">
+        @user.GetDisplayName()
+    </div>
+    <div class="position">
+        Звание: <b>@user.UserRank.Title</b>
+    </div>
+    <div class="avatar">
+        <img src="@user.AvatarUrl" />
+    </div>
+    <div class="resources">
+        <div style="padding: 0; margin-top: 5px; color: white;">
+            Мои ресурсы:
+        </div>
+        <div class="coins">
+            @user.GetGoldCoins().ToString("0")
+        </div>
+        <div class="honey">
+            @user.GetHoney().ToString("0")
+        </div>
+        <div class="bars">
+            @user.GetGoldBars().ToString("0.0000")
+        </div>
+    </div>
+    <ul id="account-menu">
+        <li id="apiary-menu-item">
+            <a href="/account/apiary">Производство</a><div class="bee"></div>
+        </li>
+        <li id="shop-menu-item">
+            <a href="/account/shop">Магазин</a><div class="bee"></div>
+        </li>
+        <li id="stocks-menu-item">
+            <a href="/account/exchange">Биржа</a><div class="bee"></div>
+        </li>
+        <li id="history-menu-item">
+            <a href="/account/history">История</a><div class="bee"></div>
+        </li>
+        <li id="partners-menu-item">
+            <a href="/account/partners">Партнерам</a><div class="bee"></div>
+        </li>
+        @if (user.IsAdmin)
+        {
+            <li id="administration-menu-item">
+                <a href="/administration">Администрирование</a><div class="bee"></div>
+            </li>
+        }
+    </ul>
+</div>

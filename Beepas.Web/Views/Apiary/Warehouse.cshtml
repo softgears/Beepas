@@ -1,0 +1,31 @@
+﻿@model Beepas.Web.Classes.Entities.Warehouse
+
+<div class="warehouse" data-id="@Model.Id">
+    <a name="@Model.Id"></a>
+    <div class="image">
+        @if (Model.IsFull)
+        {
+            <img src="/Content/images/apiary/warehouses/@Model.WarehouseType.Image/full.png"/>
+        }
+        else
+        {
+            <img src="/Content/images/apiary/warehouses/@Model.WarehouseType.Image/normal.png"/>
+        }
+    </div>
+    <div class="upgrade" onclick="window.location.href='/apiary/warehouses/upgrade/@Model.Id'" title="Улучшить">Уровень @Model.WarehouseType.Level</div>
+    <div class="title">
+        Склад [ <span class="capacity">@Model.WarehouseType.Capacity.ToString("0") L</span> ]
+    </div>
+    <div class="details">
+        <div class="content">
+            Меда на складе: <div class="progress-wrapper">
+                             <div class="fill-progress" style="width: @Model.FillPercentage"></div>
+                             <div class="content-label">@Model.CurrentHoney.ToString("0")</div>
+                         </div>
+        </div>
+        <div></div>
+        <div class="load-to-transport" onclick="window.location.href='/apiary/warehouses/load/@Model.Id'">
+            
+        </div>
+    </div>
+</div>

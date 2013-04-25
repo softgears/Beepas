@@ -1,0 +1,25 @@
+﻿@using Beepas.Web.Classes.Entities
+@model Beepas.Web.Classes.Entities.Hive
+
+@{
+    ViewBag.Title = "Выбор автоматического сборщика";
+    Layout = "../Shared/CommonLayout.cshtml";
+    var atType = (AutoCollectorType) ViewBag.autoCollectorType;
+}
+
+<div id="page-shop">
+    <div class="info">
+        Для данного улья автоматический сборщик <b>@(Model.HasAutoCollector ? "активирован":"не активирован")</b>. При активации, сборщик автоматически будет собирать распределять до <b>@atType.DailyRate</b> литров меда на склад.
+    </div>
+    <ul>
+        <li>
+            <a href="/apiary/hives/buy-auto-collector/@Model.Id?period=1">@(Model.HasAutoCollector ? "Продлить":"Включить") автоматический сборщик на один день за @atType.DayPrice.ToString("0") монет</a>
+        </li>
+        <li>
+            <a href="/apiary/hives/buy-auto-collector/@Model.Id?period=7">@(Model.HasAutoCollector ? "Продлить":"Включить") автоматический сборщик на 7 дней за @atType.WeekPrice.ToString("0") монет</a>
+        </li>
+        <li>
+            <a href="/apiary/hives/buy-auto-collector/@Model.Id?period=31">@(Model.HasAutoCollector ? "Продлить":"Включить") автоматический сборщик на 31 день за @atType.MonthPrice.ToString("0") монет</a>
+        </li>
+    </ul>
+</div>

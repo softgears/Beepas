@@ -1,0 +1,416 @@
+body
+	font-family: Tahoma
+	font-size: 12px
+	color: #295673
+	background: url(../../images/layout/bg.jpg)
+
+	a
+		color: #3193ff
+
+	#header
+		height: 457px
+		background: url(../../images/layout/header.png) center top no-repeat
+
+		#header-content
+			position: relative
+			width: 1280px
+			margin: 0px auto
+
+			#top-bee
+				position: absolute
+				width: 119px
+				height: 120px
+				background: url(../../images/layout/bee.png) no-repeat
+				left: 600px
+				top: 30px
+
+			#top-uley
+				position: absolute
+				width: 235px
+				height: 149px
+				background: url(../../images/layout/uley.png) no-repeat
+				left: 945px
+				top: 179px
+				cursor: pointer
+
+			#players-callout
+				position: absolute
+				width: 207px
+				height: 120px
+				background: url(../../images/layout/player-callout.png) no-repeat
+				left: 970px
+				top: 70px
+
+				.value
+					font-size: 21px
+					color: #ffd800
+					text-align: center
+					margin-top: 45px
+					font-weight: bold
+
+			#bank-callout
+				position: absolute
+				width: 320px
+				height: 119px
+				background: url(../../images/layout/bank-callout.png) no-repeat
+				left: 650px
+				top: 135px
+
+				.value
+					font-size: 36px
+					color: #ffd800
+					text-align: center
+					margin-top: 50px
+					font-weight: bold
+					margin-right: 50px
+
+			#main-menu
+				position: absolute
+				width: auto
+				top: 377px
+				left: 390px
+
+				ul
+					li
+						display: inline-block
+						vertical-align: top
+						margin-right: 18px
+
+						a
+							color: white
+							font-size: 15px
+
+							&:hover
+								text-decoration: underline
+
+			#login-button
+				position: absolute
+				width: 198px
+				height: 61px
+				background: url(../../images/layout/login.png) left top no-repeat
+				top: 355px
+				left: 945px
+				cursor: pointer
+				display: block
+
+				&:hover
+					background: url(../../images/layout/login.png) left -60px no-repeat
+
+			#logout-button
+				position: absolute
+				width: 62px
+				height: 61px
+				background: url(../../images/layout/logout.png) left top no-repeat
+				top: 355px
+				left: 1085px
+				cursor: pointer
+				&:hover
+					background: url(../../images/layout/logout.png) left -61px no-repeat
+
+			#money-button
+				position: absolute
+				width: 157px
+				height: 49px
+				background: url(../../images/layout/money.png) left top no-repeat
+				top: 362px
+				left: 927px
+				cursor: pointer
+
+				&:hover
+					background: url(../../images/layout/money.png) left -48px no-repeat
+
+
+	#content
+
+		#content-wrapper
+			width: 1280px
+			margin: 0px auto
+
+			#content-inner
+				width: 1000px
+				margin: 0px auto
+				text-align: center
+				position: relative
+				top: -35px
+
+				#content-holder
+					width: 620px
+					display: inline-block
+					vertical-align: top
+					text-align: left
+					margin-left: 55px
+					padding-top: 15px
+
+					#page-static
+						padding-top: 5px
+
+						#page-title
+							font-size: 22px
+							color: #295673
+							text-align: left
+							padding-bottom: 10px
+							border-bottom: 3px solid #ffeb4b
+							padding-top: 15px
+
+						.page-content
+							margin: 15px 0px
+
+							.field
+								margin-bottom: 15px
+
+								.label
+									margin-bottom: 5px
+
+								.editor
+									input[type='text'], input[type='password']
+										border: 1px solid lightgray
+										padding: 3px
+										width: 250px
+
+									label.error
+										color: red
+										margin-left: 5px
+
+							#reg-submit
+								border: 0
+								margin-top: 5px
+								width: 105px
+								height: 34px
+								background: url(../../images/layout/regbutton.png) left top no-repeat
+								cursor: pointer
+								margin-left: 10px
+
+								&:hover
+									background: url(../../images/layout/regbutton.png) left -35px no-repeat
+
+							#page-shop
+
+								b
+									font-weight: bold
+
+
+								ul
+									li
+										margin: 5px 0px
+
+									a
+										color: #3193ff
+
+										&:hover
+											text-decoration: underline
+
+
+
+				#account-block
+					display: inline-block
+					vertical-align: top
+					position: relative
+					left: 10px
+					width: 293px
+					height: 457px
+					background: url(../../images/layout/accontbg.png) left top no-repeat
+					margin-left: 28px
+
+					#account
+						padding: 20px 25px
+						text-align: left
+
+						#profile-card
+							width: 30px
+							height: 21px
+							cursor: pointer
+							background: url(../../images/layout/profile-card.png)
+
+						#profile-settings
+							height: 23px
+							width: 22px
+							cursor: pointer
+							background: url(../../images/layout/profile-settings.png)
+
+							&:hover
+								background: url(../../images/layout/profile-settings-active.png) !important
+
+
+						.login
+							font-size: 30px
+							color: #fffd5c
+							text-align: center
+
+						.position
+							margin-top: 10px
+							color: white
+							font-size: 12px
+							text-align: center
+
+							b
+								font-weight: bold
+
+						.avatar
+							display: inline-block
+							vertical-align: top
+							width: 116px
+							height: 116px
+							overflow: hidden
+							border: 2px solid white
+							border-radius: 25px
+							text-align: center
+							margin-top: 20px
+							background-color: white
+							margin-right: 7px
+
+							img
+								width: 116px
+								height: auto
+								min-height: 116px
+
+
+
+						.resources
+							display: inline-block
+							vertical-align: top
+							width: 100px
+							margin-top: 20px
+							text-align: left
+							color: #fffd5c
+							font-size: 15px
+
+							div
+								padding: 3px
+								padding-left: 32px
+								margin-bottom: 10px
+
+							.coins
+								background: url(../../images/layout/coins.png) left center no-repeat
+
+							.honey
+								background: url(../../images/layout/honey.png) left center no-repeat
+
+							.bars
+								background: url(../../images/layout/bars.png) left center no-repeat
+
+
+
+						#account-menu
+							clear: both
+							text-align: center
+							margin-top: 20px
+
+							li
+								padding: 5px
+								position: relative
+
+								.bee
+									position: absolute
+									right: -10px
+									bottom: -15px
+									display: none
+									width: 63px
+									height: 63px
+									background: url(../../images/layout/accountbee.png) left top no-repeat
+
+								&:hover, &.active
+									background-color: #81cfff
+									border-radius: 15px
+
+									.bee
+										display: block
+
+
+								a
+									color: white
+									font-size: 15px
+
+
+
+
+
+	#footer
+		height: 122px
+		background: url(../../images/layout/footer.png) center top no-repeat
+
+		#copyrights
+			padding-top: 40px
+			font-size: 15px
+			color: white
+			text-align: center
+
+	#dialog-overlay
+		display: none
+		position: fixed
+		background-color: black
+		opacity: 0.8
+		left: 0px
+		top: 0px
+		z-index: 99
+
+	#login-dialog
+		position: absolute
+		z-index: 100
+		width: 471px
+		height: 554px
+		display: none
+		background: url(../../images/layout/loginbg.png) left top no-repeat
+
+		#login-wrapper
+			padding-left: 125px
+			padding-top: 186px
+
+			.title
+				font-size: 14px
+				color: black
+				text-transform: uppercase
+
+			.social
+				margin: 20px 0px
+
+			.field
+				margin-bottom: 20px
+
+				.field
+					margin-bottom: 5px
+					color: black
+					font-size: 13px
+
+				.editor
+					input[type='text'], input[type='password']
+						border: 1px solid lightgray
+						padding: 5px
+
+			input[type='submit']
+				border: 0
+				margin-top: 5px
+				width: 62px
+				height: 34px
+				background: url(../../images/layout/loginbutton.png) left top no-repeat
+				cursor: pointer
+				display: inline-block
+				vertical-align: top
+				margin-left: 25px
+
+				&:hover
+					background: url(../../images/layout/loginbutton.png) left -35px no-repeat
+
+			.register-action
+				display: inline-block
+				vertical-align: top
+				border: 0
+				margin-top: 5px
+				width: 105px
+				height: 34px
+				background: url(../../images/layout/regbutton.png) left top no-repeat
+				cursor: pointer
+				margin-left: 10px
+
+				&:hover
+					background: url(../../images/layout/regbutton.png) left -35px no-repeat
+
+			#restore-wrapper
+				margin-top: 20px
+				margin-left: 50px
+
+				a
+					color: #007ca8
+
+					&:hover
+						text-decoration: underline
+

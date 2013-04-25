@@ -1,0 +1,37 @@
+﻿@model Beepas.Web.Classes.Entities.Hive
+
+<div class="hive" data-id="@Model.Id">
+    <a name="@Model.Id"></a>
+    <div class="image">
+        @if (Model.IsFull)
+        {
+            <img src="/Content/images/apiary/hives/@Model.HiveType.Image/full.png"/>
+        }
+        else
+        {
+            <img src="/Content/images/apiary/hives/@Model.HiveType.Image/normal.png"/>
+        }
+    </div>
+    <div class="upgrade" title="Улучшить" onclick="window.location.href='/apiary/hives/upgrade/@Model.Id'">Уровень @Model.HiveType.Level</div>
+    <div class="title">
+        Улей [ <span class="capacity">@Model.HiveType.Capacity.ToString("0") L</span> ]
+    </div>
+    <div class="details">
+        <div class="content">
+            Меда в улье: <div class="progress-wrapper">
+                             <div class="fill-progress" style="width: @Model.FillPercentage"></div>
+                             <div class="content-label">@Model.CurrentHoney.ToString("0")</div>
+                         </div>
+        </div>
+        <div class="production">
+            Производительность: @Model.HiveType.ProductionRate.ToString("0") литров за 5 минут
+        </div>
+        <div class="hive-auto-collector @(Model.HasAutoCollector ? "active":"" )" onclick="window.location.href='/apiary/hives/choose-auto-collector/@Model.Id'">
+            
+        </div>
+        <div></div>
+        <div class="collect" onclick="window.location.href='/apiary/hives/collect/@Model.Id'">
+            
+        </div>
+    </div>
+</div>

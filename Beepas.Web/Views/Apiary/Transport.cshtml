@@ -1,0 +1,22 @@
+﻿@model IList<Beepas.Web.Classes.Entities.Transport>
+
+@{
+    ViewBag.Title = "Производство";
+    Layout = "ApiaryLayout.cshtml";
+}
+
+@if (Model.Count > 0)
+{
+    foreach (var transport in Model)
+    {
+        @Html.Partial("Transports", transport)
+    }
+}
+else
+{
+    <p align="center">У вас нет транспортных средств. Вы можете купить себе транспортное средство для перевозки собранного меда на биржу в <a href="/account/shop">магазине</a></p>
+}
+
+<script type="text/javascript">
+    $("#page-title").append("<div class='current-section-title'>Транспортные средства</div>")
+</script>

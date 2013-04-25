@@ -1,0 +1,85 @@
+/* line 1, ../sass/main.sass */
+#page-main {
+  padding-top: 5px;
+}
+/* line 4, ../sass/main.sass */
+#page-main .title {
+  font-size: 22px;
+  color: #295673;
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 3px solid #ffeb4b;
+  padding-top: 10px;
+}
+/* line 13, ../sass/main.sass */
+#page-main .text {
+  font-size: 14px;
+  color: #295673;
+  text-align: justify;
+  line-height: 1.5;
+  margin: 15px;
+  margin-bottom: 25px;
+}
+/* line 21, ../sass/main.sass */
+#page-main #front-menu {
+  display: inline-block;
+  vertical-align: top;
+  width: 613px;
+  text-align: center;
+  position: relative;
+}
+/* line 28, ../sass/main.sass */
+#page-main #front-menu .upper {
+  width: 613px;
+  height: 69px;
+  background: url(../../images/main/lower.png) center top no-repeat;
+  position: absolute;
+}
+/* line 34, ../sass/main.sass */
+#page-main #front-menu #info-cell {
+  width: 203px;
+  height: 232px;
+  background: url(../../images/main/info.png) left top no-repeat;
+  cursor: pointer;
+  float: left;
+  margin-top: 16px;
+}
+/* line 42, ../sass/main.sass */
+#page-main #front-menu #info-cell:hover {
+  background: url(../../images/main/info-active.png) left top no-repeat;
+}
+/* line 45, ../sass/main.sass */
+#page-main #front-menu #how-cell {
+  float: left;
+  width: 206px;
+  height: 232px;
+  background: url(../../images/main/how.png) left top no-repeat;
+  cursor: pointer;
+  margin-top: 16px;
+}
+/* line 53, ../sass/main.sass */
+#page-main #front-menu #how-cell:hover {
+  background: url(../../images/main/how-active.png) left top no-repeat;
+}
+/* line 56, ../sass/main.sass */
+#page-main #front-menu #play-cell {
+  float: left;
+  width: 204px;
+  height: 232px;
+  background: url(../../images/main/play.png) left top no-repeat;
+  cursor: pointer;
+  margin-top: 16px;
+}
+/* line 64, ../sass/main.sass */
+#page-main #front-menu #play-cell:hover {
+  background: url(../../images/main/play-active.png) left top no-repeat;
+}
+/* line 67, ../sass/main.sass */
+#page-main #front-menu .lower {
+  width: 613px;
+  height: 69px;
+  clear: both;
+  position: absolute;
+  background: url(../../images/main/upper.png) center top no-repeat;
+  top: 195px;
+}

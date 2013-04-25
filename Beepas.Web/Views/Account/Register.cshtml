@@ -1,0 +1,122 @@
+﻿@using Beepas.Web.Classes.Entities
+@model dynamic
+
+@{
+    ViewBag.Title = "Регистрация в системе";
+    Layout = "../Shared/CommonLayout.cshtml";
+    var refferer = (User) ViewBag.referrer;
+}
+
+<p style="margin-bottom: 15px; text-align: center; line-height: 1.5">
+    Чтобы зарегистрироваться в проекте BEEPAS.RU, пожалуйста, заполните регистрационную форму ниже.
+</p>
+
+<form action="/account/register" method="POST" id="reg-form" style="padding-left: 60px;">
+    <div class="field">
+        <div class="label">
+            Логин
+        </div>
+        <div class="editor">
+            <input type="text" name="Login" placeholder="Введите ваш логин"/>
+        </div>
+    </div>
+    <div class="field">
+        <div class="label">
+            Пароль
+        </div>
+        <div class="editor">
+            <input type="password" name="Password" placeholder="Введите пароль" id="reg-password-field"/>
+        </div>
+    </div>
+    <div class="field">
+        <div class="label">
+            Подтверждение пароля
+        </div>
+        <div class="editor">
+            <input type="password" name="PasswordConfirm" placeholder="Введите пароль еще раз"/>
+        </div>
+    </div>
+    <div class="field">
+        <div class="label">
+            Email
+        </div>
+        <div class="editor">
+            <input type="text" name="Email" placeholder="Введите ваш Email адрес"/>
+        </div>
+    </div>
+    <div class="field">
+        <div class="label">
+            Имя
+        </div>
+        <div class="editor">
+            <input type="text" name="FirstName" placeholder="Введите ваш Email адрес"/>
+        </div>
+    </div>
+    <div class="field">
+        <div class="label">
+            Фамилия
+        </div>
+        <div class="editor">
+            <input type="text" name="LastName" placeholder="Фамилия"/>
+        </div>
+    </div>
+    @if (refferer != null)
+    {
+        <div class="field">
+            <div class="label">
+            Рефферер (человек, пригласивший вас)
+            </div>
+            <div class="editor">
+                <input type="text" name="ReferalName" readonly="readonly" value="@refferer.GetDisplayName()"/>
+                <input type="hidden" name="ReffererId" value="@refferer.Id"/>
+            </div>    
+        </div>
+    }
+    <div class="field">
+        <div class="editor">
+            <input type="checkbox" name="Agree" id="agreed-field"/> Я прочитал и принимаю <a href="/rules">правила игры</a>.
+        </div>
+    </div>
+    <input type="submit" id="reg-submit" value=" "/>
+</form>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#reg-form").validate( {
+            rules: {
+                Login: {
+                    required: true,
+                    maxlength: 14,
+                    regexp: "([0-9A-Za-z]){1,14}",
+                    remote: '/account/check-login'
+                },
+                Password: {
+                    required: true,
+                    minlength: 6
+                },
+                PasswordConfirm: {
+                    required: true,
+                    minlength: 6,
+                    equalTo: "#reg-password-field"
+                },
+                Email: {
+                    required: true,
+                    email: true
+                },
+                FirstName: {
+                    maxlength: 255
+                },
+                LastName: {
+                    maxlength: 255
+                }
+            },
+            submitHandler: function(form) {
+                var agreed = $("#agreed-field").prop("checked");
+                if (!agreed) {
+                    alert("Вы должны принять правила игры");
+                } else {
+                    form.submit();
+                }
+            }
+        });
+    });
+</script>
