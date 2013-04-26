@@ -257,6 +257,9 @@
     <Content Include="Views\Account\AddBalance.cshtml" />
     <Content Include="Views\Shared\NotEnoughMoney.cshtml" />
     <Content Include="Views\Apiary\ChooseAutoCollector.cshtml" />
+    <Content Include="Views\Main\Rules.cshtml" />
+    <Content Include="Views\Main\Info.cshtml" />
+    <Content Include="Views\Main\VirtualEconomy.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\styles\sass\" />

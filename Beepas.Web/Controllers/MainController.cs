@@ -4,6 +4,7 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using Beepas.Web.Classes.Managers;
+using Beepas.Web.Classes.Routing;
 
 namespace Beepas.Web.Controllers
 {
@@ -34,6 +35,36 @@ namespace Beepas.Web.Controllers
         /// <param name="aspxerrorpath">Путь, который не найден</param>
         /// <returns></returns>
         public ActionResult NotFound(string aspxerrorpath)
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Отображает страницу с правилами
+        /// </summary>
+        /// <returns></returns>
+        [Route("rules")]
+        public ActionResult Rules()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Отображает страницу с информацией об игре
+        /// </summary>
+        /// <returns></returns>
+        [Route("info")]
+        public ActionResult Info()
+        {
+            return View();
+        }
+
+        /// <summary>
+        /// Отображает страницу с инфомрацией об виртуальной экономике
+        /// </summary>
+        /// <returns></returns>
+        [Route("economic")]
+        public ActionResult VirtualEconomy()
         {
             return View();
         }
