@@ -142,6 +142,7 @@
     <Compile Include="Classes\IoC\Locator.cs" />
     <Compile Include="Classes\IoC\WebLayer.cs" />
     <Compile Include="Classes\Managers\MoneyManager.cs" />
+    <Compile Include="Classes\Managers\StatsManager.cs" />
     <Compile Include="Classes\Managers\UpgradesManager.cs" />
     <Compile Include="Classes\Managers\UsersManager.cs" />
     <Compile Include="Classes\Routing\RouteAttribute.cs" />
@@ -214,6 +215,14 @@
     <Content Include="Content\images\main\play-active.png" />
     <Content Include="Content\images\main\play.png" />
     <Content Include="Content\images\main\upper.png" />
+    <Content Include="Content\images\stats\bars.png" />
+    <Content Include="Content\images\stats\clock.png" />
+    <Content Include="Content\images\stats\digits-green.png" />
+    <Content Include="Content\images\stats\hives.png" />
+    <Content Include="Content\images\stats\honey.png" />
+    <Content Include="Content\images\stats\money.png" />
+    <Content Include="Content\images\stats\players.png" />
+    <Content Include="Content\images\stats\separator.png" />
     <Content Include="Content\styles\stylesheets\all.css" />
     <Content Include="Global.asax" />
     <Content Include="Classes\DAL\Beepas.dbml">
@@ -263,6 +272,7 @@
     <Content Include="Views\Main\VirtualEconomy.cshtml" />
     <Content Include="Views\Statistics\Index.cshtml" />
     <Content Include="Views\Statistics\StatsLayout.cshtml" />
+    <Content Include="Views\Statistics\Players.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\styles\sass\" />

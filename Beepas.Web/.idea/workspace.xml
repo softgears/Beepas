@@ -9,7 +9,7 @@
     <file path="/main.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366953376513" ignored="false" />
     <file path="/apiary.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366344767229" ignored="false" />
     <file path="/VirtualEconomy.cshtml" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366945093228" ignored="false" />
-    <file path="/stats.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1367203007453" ignored="false" />
+    <file path="/stats.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1367220024833" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,12 +41,8 @@
       <file leaf-file-name="stats.sass" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Content/styles/sass/stats.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.95981085">
-              <folding>
-                <marker date="1367203007861" expanded="true" signature="11:1412" placeholder="..." />
-                <marker date="1367203007861" expanded="true" signature="242:1412" placeholder="..." />
-                <marker date="1367203007861" expanded="true" signature="1300:1412" placeholder="..." />
-              </folding>
+            <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.50879395">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -430,12 +426,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/styles/sass/stats.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.95981085">
-          <folding>
-            <marker date="1367203007861" expanded="true" signature="11:1412" placeholder="..." />
-            <marker date="1367203007861" expanded="true" signature="242:1412" placeholder="..." />
-            <marker date="1367203007861" expanded="true" signature="1300:1412" placeholder="..." />
-          </folding>
+        <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.50879395">
+          <folding />
         </state>
       </provider>
     </entry>

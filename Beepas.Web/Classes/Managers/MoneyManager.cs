@@ -37,7 +37,7 @@ namespace Beepas.Web.Classes.Managers
                 result += incomePayments.Sum(p => p.Amount);
             }
 
-            return result;
+            return result*(decimal)0.6;
         }
     }
 }

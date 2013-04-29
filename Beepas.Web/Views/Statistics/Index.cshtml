@@ -1,6 +1,136 @@
-﻿@model dynamic
+﻿@using Beepas.Web.Classes.IoC
+@using Beepas.Web.Classes.Managers
+@model dynamic
 
 @{
     ViewBag.Title = "Статистика";
     Layout = "StatsLayout.cshtml";
+    var mgr = Locator.GetService<StatsManager>();
 }
+
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/clock.png" />
+    </div>
+    <div class="title">
+        Игра работает:
+    </div>
+    <div class="countdown" id="calc-countdown">
+        <div class="digit-block">
+            <div class="digit">
+            </div>
+            <div class="digit">
+            </div>
+            <div class="digit">
+            </div>
+            <div class="digit-block-label">
+                дней
+            </div>
+        </div>
+        <div class="digit-separator">:</div>
+        <div class="digit-block">
+            <div class="digit">
+            </div>
+            <div class="digit">
+            </div>
+            <div class="digit-block-label">
+                часов
+            </div>
+        </div>
+        <div class="digit-separator">:</div>
+        <div class="digit-block">
+            <div class="digit">
+            </div>
+            <div class="digit">
+            </div>
+            <div class="digit-block-label">
+                минут
+            </div>
+        </div>
+        <div class="digit-separator">:</div>
+        <div class="digit-block">
+            <div class="digit">
+            </div>
+            <div class="digit">
+            </div>
+            <div class="digit-block-label">
+                секунд
+            </div>
+        </div>
+    </div>
+</div>
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/players.png" />
+    </div>
+    <div class="title">
+        Игроков:
+    </div>
+    <div class="value">
+        @mgr.GetTotalPlayers()
+    </div>
+    <div class="measure">
+        сегодня новых @mgr.GetNewPlayers()
+    </div>
+</div>
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/bars.png" />
+    </div>
+    <div class="title">
+        Банк игры:
+    </div>
+    <div class="value">
+        @mgr.GetGameBank().ToString("0")
+    </div>
+    <div class="measure">
+        слитков
+    </div>
+</div>
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/hives.png" />
+    </div>
+    <div class="title">
+        Количество ульев:
+    </div>
+    <div class="value">
+        @mgr.GetTotalHives()
+    </div>
+    <div class="measure">
+        штук
+    </div>
+</div>
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/honey.png" />
+    </div>
+    <div class="title">
+        Собрано меда:
+    </div>
+    <div class="value">
+        @mgr.GetTotalHoneyCollected().ToString("0")
+    </div>
+    <div class="measure">
+        килограмм
+    </div>
+</div>
+<div class="stat-item">
+    <div class="image">
+        <img src="~/Content/images/stats/money.png" />
+    </div>
+    <div class="title">
+        Выведено:
+    </div>
+    <div class="value">
+        @mgr.GetWinPayments().ToString("0")
+    </div>
+    <div class="measure">
+        рублей
+    </div>
+</div>
+<script type="text/javascript">
+    $(document).ready(function () {
+        $("#total-stats").addClass("active");
+    });
+</script>

@@ -24,6 +24,7 @@ namespace Beepas.Web.Classes.IoC
             builder.RegisterType<UsersManager>().AsSelf().InstancePerHttpRequest();
             builder.RegisterType<MoneyManager>().AsSelf().InstancePerHttpRequest();
             builder.RegisterType<UpgradesManager>().AsSelf().InstancePerHttpRequest();
+            builder.RegisterType<StatsManager>().AsSelf().InstancePerHttpRequest();
             builder.RegisterControllers(this.ThisAssembly);
         }
     }

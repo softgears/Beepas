@@ -58,4 +58,120 @@
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
   padding: 10px;
+  color: white;
+}
+/* line 55, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item {
+  background: url(../../images/stats/separator.png) left bottom repeat-x;
+  padding-bottom: 10px;
+  margin-bottom: 10px;
+}
+/* line 60, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .image {
+  display: inline-block;
+  vertical-align: top;
+  width: 50px;
+  text-align: center;
+}
+/* line 66, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .title, #page-stats #stats-wrapper #stats-content .stat-item .measure {
+  display: inline-block;
+  vertical-align: top;
+  width: 165px;
+  text-align: right;
+  font-size: 15px;
+  color: white;
+  margin-right: 5px;
+  padding-top: 3px;
+  margin-top: 5px;
+}
+/* line 77, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .measure {
+  width: auto;
+  text-align: right;
+  margin-left: 5px;
+}
+/* line 82, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .value {
+  display: inline-block;
+  vertical-align: top;
+  width: 215px;
+  margin-top: 5px;
+  padding: 5px;
+  color: red;
+  font-size: 15px;
+  text-align: center;
+  background-color: white;
+  border-radius: 5px;
+}
+/* line 94, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown {
+  display: inline-block;
+}
+/* line 97, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 101, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit {
+  display: inline-block;
+  vertical-align: top;
+  width: 26px;
+  height: 43px;
+  background: url(../../images/stats/digits-green.png) center top no-repeat;
+}
+/* line 108, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit1 {
+  background: url(../../images/stats/digits-green.png) center -43px no-repeat;
+}
+/* line 111, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit2 {
+  background: url(../../images/stats/digits-green.png) center -86px no-repeat;
+}
+/* line 114, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit3 {
+  background: url(../../images/stats/digits-green.png) center -129px no-repeat;
+}
+/* line 117, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit4 {
+  background: url(../../images/stats/digits-green.png) center -172px no-repeat;
+}
+/* line 120, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit5 {
+  background: url(../../images/stats/digits-green.png) center -215px no-repeat;
+}
+/* line 123, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit6 {
+  background: url(../../images/stats/digits-green.png) center -258px no-repeat;
+}
+/* line 126, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit7 {
+  background: url(../../images/stats/digits-green.png) center -301px no-repeat;
+}
+/* line 129, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit8 {
+  background: url(../../images/stats/digits-green.png) center -344px no-repeat;
+}
+/* line 132, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit9 {
+  background: url(../../images/stats/digits-green.png) center -387px no-repeat;
+}
+/* line 135, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit-block-label {
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  color: white;
+}
+/* line 141, ../sass/stats.sass */
+#page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-separator {
+  display: inline-block;
+  vertical-align: top;
+  font-size: 16px;
+  color: white;
+  font-style: normal;
+  font-weight: bold;
+  height: 70px;
+  line-height: 50px;
 }

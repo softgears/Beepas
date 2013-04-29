@@ -30,5 +30,15 @@ namespace Beepas.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Отображает расширенную статистику по игрокам
+        /// </summary>
+        /// <returns></returns>
+        [Route("stats/players")]
+        public ActionResult Players()
+        {
+            return View();
+        }
+
     }
 }
