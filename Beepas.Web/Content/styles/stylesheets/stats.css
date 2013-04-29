@@ -46,13 +46,14 @@
   vertical-align: top;
   margin-right: 10px;
   cursor: pointer;
-  text-shadow: 3px 4px 5px rgba(0, 0, 0, 0.5);
+  text-shadow: 1px 2px 3px #cd8108;
 }
 /* line 45, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-header .item:hover, #page-stats #stats-wrapper #stats-header .item.active {
   background-color: #3193ff;
+  text-shadow: 2px 3px 3px #0b70de;
 }
-/* line 48, ../sass/stats.sass */
+/* line 50, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content {
   background-color: #3193ff;
   border-bottom-left-radius: 10px;
@@ -60,20 +61,20 @@
   padding: 10px;
   color: white;
 }
-/* line 55, ../sass/stats.sass */
+/* line 57, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item {
   background: url(../../images/stats/separator.png) left bottom repeat-x;
   padding-bottom: 10px;
   margin-bottom: 10px;
 }
-/* line 60, ../sass/stats.sass */
+/* line 62, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .image {
   display: inline-block;
   vertical-align: top;
   width: 50px;
   text-align: center;
 }
-/* line 66, ../sass/stats.sass */
+/* line 68, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .title, #page-stats #stats-wrapper #stats-content .stat-item .measure {
   display: inline-block;
   vertical-align: top;
@@ -85,13 +86,13 @@
   padding-top: 3px;
   margin-top: 5px;
 }
-/* line 77, ../sass/stats.sass */
+/* line 79, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .measure {
   width: auto;
   text-align: right;
   margin-left: 5px;
 }
-/* line 82, ../sass/stats.sass */
+/* line 84, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .value {
   display: inline-block;
   vertical-align: top;
@@ -104,16 +105,16 @@
   background-color: white;
   border-radius: 5px;
 }
-/* line 94, ../sass/stats.sass */
+/* line 96, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown {
   display: inline-block;
 }
-/* line 97, ../sass/stats.sass */
+/* line 99, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block {
   display: inline-block;
   vertical-align: top;
 }
-/* line 101, ../sass/stats.sass */
+/* line 103, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit {
   display: inline-block;
   vertical-align: top;
@@ -121,50 +122,50 @@
   height: 43px;
   background: url(../../images/stats/digits-green.png) center top no-repeat;
 }
-/* line 108, ../sass/stats.sass */
+/* line 110, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit1 {
   background: url(../../images/stats/digits-green.png) center -43px no-repeat;
 }
-/* line 111, ../sass/stats.sass */
+/* line 113, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit2 {
   background: url(../../images/stats/digits-green.png) center -86px no-repeat;
 }
-/* line 114, ../sass/stats.sass */
+/* line 116, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit3 {
   background: url(../../images/stats/digits-green.png) center -129px no-repeat;
 }
-/* line 117, ../sass/stats.sass */
+/* line 119, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit4 {
   background: url(../../images/stats/digits-green.png) center -172px no-repeat;
 }
-/* line 120, ../sass/stats.sass */
+/* line 122, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit5 {
   background: url(../../images/stats/digits-green.png) center -215px no-repeat;
 }
-/* line 123, ../sass/stats.sass */
+/* line 125, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit6 {
   background: url(../../images/stats/digits-green.png) center -258px no-repeat;
 }
-/* line 126, ../sass/stats.sass */
+/* line 128, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit7 {
   background: url(../../images/stats/digits-green.png) center -301px no-repeat;
 }
-/* line 129, ../sass/stats.sass */
+/* line 131, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit8 {
   background: url(../../images/stats/digits-green.png) center -344px no-repeat;
 }
-/* line 132, ../sass/stats.sass */
+/* line 134, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit.digit9 {
   background: url(../../images/stats/digits-green.png) center -387px no-repeat;
 }
-/* line 135, ../sass/stats.sass */
+/* line 137, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-block .digit-block-label {
   text-align: center;
   font-size: 14px;
   font-style: normal;
   color: white;
 }
-/* line 141, ../sass/stats.sass */
+/* line 143, ../sass/stats.sass */
 #page-stats #stats-wrapper #stats-content .stat-item .countdown .digit-separator {
   display: inline-block;
   vertical-align: top;

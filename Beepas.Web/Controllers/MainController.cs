@@ -69,5 +69,15 @@ namespace Beepas.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Отображает страницу с информацией как играть
+        /// </summary>
+        /// <returns></returns>
+        [Route("how-to-play")]
+        public ActionResult HowToPlay()
+        {
+            return View();
+        }
+
     }
 }
