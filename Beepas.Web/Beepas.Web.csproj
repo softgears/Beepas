@@ -154,6 +154,7 @@
     <Compile Include="Controllers\ApiaryController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -260,6 +261,8 @@
     <Content Include="Views\Main\Rules.cshtml" />
     <Content Include="Views\Main\Info.cshtml" />
     <Content Include="Views\Main\VirtualEconomy.cshtml" />
+    <Content Include="Views\Statistics\Index.cshtml" />
+    <Content Include="Views\Statistics\StatsLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\styles\sass\" />

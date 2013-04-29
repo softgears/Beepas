@@ -1,6 +1,6 @@
 3.2.3 (Media Mark)
-7655ec4da5f7de36fd871ef86ddee4c19fba3945
-o:Sass::Tree::RootNode	:@template"kbody
+0538fa8fdd4d40382129e8a74d04ebd1a1e9f1ca
+o:Sass::Tree::RootNode	:@template"Ïbody
 	font-family: Tahoma
 	font-size: 12px
 	color: #295673
@@ -416,12 +416,18 @@
 					&:hover
 						text-decoration: underline
 
+	#card-dialog
+		position: absolute
+		display: none
+		position: fixed
+		width: 250px
+		height: 100px
 :@options{ :@has_childrenT:@children[o:Sass::Tree::RuleNode:
 @rule["	body:@filename"GC:/Work/Projects/Beepas/Beepas.Web/Content/styles/sass/layout.sass:@parsed_ruleso:"Sass::Selector::CommaSequence;@:
 @linei:@members[o:Sass::Selector::Sequence;[o:#Sass::Selector::SimpleSequence
 :@subject0;@:@sourceso:Set:
 @hash{ ;i;[o:Sass::Selector::Element	;@:@namespace0;i:
-@name["	body;@;i;T;	[o:Sass::Tree::PropNode:@valueo:Sass::Script::String	;"Tahoma:
+@name["	body;@;i;T;	[o:Sass::Tree::PropNode:@valueo:Sass::Script::String	;"Tahoma:
 @type:identifier;@;i;@;@;i:@prop_syntax:new;	[ :
 @tabsi ;["font-familyo;;o:Sass::Script::Number;i:@denominator_units[ ;@;i:@numerator_units["px:@original"	12px;@;@;i;; ;	[ ;!i ;["font-sizeo;;o:Sass::Script::Color	;0;@;i	:@attrs{	:redi.:
 alphai:
@@ -743,4 +749,11 @@ coloro;
 ;["&:hover;@;o;;@;iž;[o;;[o;
 ;0;@;o;;{ ;iž;[o;1;@;ižo;2
 ;@;;3;iž;40;["
-hover;@;iž;T;	[o;;o;	;"underline;;;@;iŸ;@;@;iŸ;; ;	[ ;!i ;["text-decoration;!i ;!i ;!i ;!i ;!i ;!i 
+hover;@;iž;T;	[o;;o;	;"underline;;;@;iŸ;@;@;iŸ;; ;	[ ;!i ;["text-decoration;!i ;!i ;!i ;!i ;!i o;
+;["#card-dialog;@;o;;@;i¡;[o;;[o;
+;0;@;o;;{ ;i¡;[o;,;@;i¡;["card-dialog;@;i¡;T;	[
+o;;o;	;"absolute;;;@;i¢;@;@;i¢;; ;	[ ;!i ;["positiono;;o;	;"	none;;;@;i£;@;@;i£;; ;	[ ;!i ;["displayo;;o;	;"
+fixed;;;@;i¤;@;@;i¤;; ;	[ ;!i ;["positiono;;o;";iú;#[ ;@;i¥;$["px;%"
+250px;@;@;i¥;; ;	[ ;!i ;["
+widtho;;o;";ii;#[ ;@;i¦;$["px;%"
+100px;@;@;i¦;; ;	[ ;!i ;["height;!i ;!i 

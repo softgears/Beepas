@@ -88,16 +88,17 @@
 .static-text p {
   margin: 5px 0px;
   line-height: 1.5;
+  text-align: justify;
 }
-/* line 81, ../sass/main.sass */
+/* line 82, ../sass/main.sass */
 .static-text p a:hover {
   text-decoration: underline;
 }
-/* line 85, ../sass/main.sass */
+/* line 86, ../sass/main.sass */
 .static-text p.title {
   font-weight: bold;
 }
-/* line 88, ../sass/main.sass */
+/* line 89, ../sass/main.sass */
 .static-text p b {
   font-weight: bold;
 }

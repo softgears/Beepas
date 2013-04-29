@@ -1,0 +1,27 @@
+﻿@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div id="page-stats">
+    <div class="page-title">
+        Статистика
+    </div>
+    <div class="info">
+        Здесь вы можете наблюдать статистику нашего проекта
+    </div>
+    
+    <div id="stats-wrapper">
+        <div id="stats-header">
+            <div class="item" id="total-stats">
+                Общая
+            </div>
+            <div class="item" id="player-stats">
+                Игроки
+            </div>
+        </div>
+        <div id="stats-content">
+            @RenderBody()
+        </div>
+    </div>
+</div>
+

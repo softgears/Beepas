@@ -467,3 +467,11 @@ body #login-dialog #login-wrapper #restore-wrapper a {
 body #login-dialog #login-wrapper #restore-wrapper a:hover {
   text-decoration: underline;
 }
+/* line 417, ../sass/layout.sass */
+body #card-dialog {
+  position: absolute;
+  display: none;
+  position: fixed;
+  width: 250px;
+  height: 100px;
+}

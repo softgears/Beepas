@@ -4,11 +4,12 @@
     <list default="true" id="3ee7622b-6abb-43b5-971e-f59a5205f864" name="Default" comment="" />
     <ignored path="Beepas.Web.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/all.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366166530106" ignored="false" />
-    <file path="/layout.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366783451105" ignored="false" />
-    <file path="/main.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366944962224" ignored="false" />
+    <file path="/all.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1367201295764" ignored="false" />
+    <file path="/layout.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366953638383" ignored="false" />
+    <file path="/main.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366953376513" ignored="false" />
     <file path="/apiary.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366344767229" ignored="false" />
     <file path="/VirtualEconomy.cshtml" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1366945093228" ignored="false" />
+    <file path="/stats.sass" changelist="3ee7622b-6abb-43b5-971e-f59a5205f864" time="1367203007453" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -31,7 +32,29 @@
       <file leaf-file-name="layout.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Content/styles/sass/layout.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="189" column="25" selection-start="3727" selection-end="3727" vertical-scroll-proportion="-88.4">
+            <state line="152" column="46" selection-start="2787" selection-end="2984" vertical-scroll-proportion="-7.5">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="stats.sass" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Content/styles/sass/stats.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.95981085">
+              <folding>
+                <marker date="1367203007861" expanded="true" signature="11:1412" placeholder="..." />
+                <marker date="1367203007861" expanded="true" signature="242:1412" placeholder="..." />
+                <marker date="1367203007861" expanded="true" signature="1300:1412" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="all.sass" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Content/styles/sass/all.sass">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="4" column="14" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.72">
               <folding />
             </state>
           </provider>
@@ -40,25 +63,7 @@
       <file leaf-file-name="main.sass" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Content/styles/sass/main.sass">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="85" column="12" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-29.76">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="VirtualEconomy.cshtml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Views/Main/VirtualEconomy.cshtml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="96" column="104" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.8321678">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="apiary.sass" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Content/styles/sass/apiary.sass">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="27" selection-start="1329" selection-end="1336" vertical-scroll-proportion="0.0">
+            <state line="79" column="27" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -75,11 +80,12 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/Content/styles/sass/reset.sass" />
-        <option value="$PROJECT_DIR$/Content/styles/sass/all.sass" />
         <option value="$PROJECT_DIR$/Content/styles/sass/apiary.sass" />
-        <option value="$PROJECT_DIR$/Content/styles/sass/layout.sass" />
-        <option value="$PROJECT_DIR$/Content/styles/sass/main.sass" />
         <option value="$PROJECT_DIR$/Views/Main/VirtualEconomy.cshtml" />
+        <option value="$PROJECT_DIR$/Content/styles/sass/main.sass" />
+        <option value="$PROJECT_DIR$/Content/styles/sass/layout.sass" />
+        <option value="$PROJECT_DIR$/Content/styles/sass/all.sass" />
+        <option value="$PROJECT_DIR$/Content/styles/sass/stats.sass" />
       </list>
     </option>
   </component>
@@ -331,11 +337,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Content/styles/sass/main.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="26" selection-start="256" selection-end="271" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Content/styles/sass/layout.sass">
       <provider selected="true" editor-type-id="text-editor">
         <state line="167" column="41" selection-start="3282" selection-end="3282" vertical-scroll-proportion="0.0">
@@ -396,36 +397,45 @@
         <state line="47" column="26" selection-start="1075" selection-end="1075" vertical-scroll-proportion="0.942217" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/styles/sass/all.sass">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="15" selection-start="78" selection-end="78" vertical-scroll-proportion="0.060283687" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Content/styles/sass/apiary.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="27" selection-start="1329" selection-end="1336" vertical-scroll-proportion="0.0">
+        <state line="80" column="27" selection-start="1329" selection-end="1336" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Views/Main/VirtualEconomy.cshtml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="96" column="104" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.8321678" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/styles/sass/main.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="79" column="27" selection-start="1538" selection-end="1538" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Content/styles/sass/all.sass">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="4" column="14" selection-start="99" selection-end="99" vertical-scroll-proportion="-2.72">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Content/styles/sass/layout.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="189" column="25" selection-start="3727" selection-end="3727" vertical-scroll-proportion="-88.4">
+        <state line="152" column="46" selection-start="2787" selection-end="2984" vertical-scroll-proportion="-7.5">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Content/styles/sass/main.sass">
+    <entry file="file://$PROJECT_DIR$/Content/styles/sass/stats.sass">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="85" column="12" selection-start="1573" selection-end="1573" vertical-scroll-proportion="-29.76">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Views/Main/VirtualEconomy.cshtml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="96" column="104" selection-start="4770" selection-end="4770" vertical-scroll-proportion="0.8321678">
-          <folding />
+        <state line="51" column="25" selection-start="1417" selection-end="1417" vertical-scroll-proportion="0.95981085">
+          <folding>
+            <marker date="1367203007861" expanded="true" signature="11:1412" placeholder="..." />
+            <marker date="1367203007861" expanded="true" signature="242:1412" placeholder="..." />
+            <marker date="1367203007861" expanded="true" signature="1300:1412" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
