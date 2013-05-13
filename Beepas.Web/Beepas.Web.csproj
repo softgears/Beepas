@@ -155,6 +155,7 @@
     <Compile Include="Controllers\ApiaryController.cs" />
     <Compile Include="Controllers\BaseController.cs" />
     <Compile Include="Controllers\MainController.cs" />
+    <Compile Include="Controllers\MessengerController.cs" />
     <Compile Include="Controllers\StatisticsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -214,7 +215,13 @@
     <Content Include="Content\images\main\lower.png" />
     <Content Include="Content\images\main\play-active.png" />
     <Content Include="Content\images\main\play.png" />
+    <Content Include="Content\images\main\submit-feedback.png" />
     <Content Include="Content\images\main\upper.png" />
+    <Content Include="Content\images\messenger\accept.png" />
+    <Content Include="Content\images\messenger\alert.png" />
+    <Content Include="Content\images\messenger\cancel.png" />
+    <Content Include="Content\images\messenger\say.png" />
+    <Content Include="Content\images\messenger\smilebg.png" />
     <Content Include="Content\images\stats\bars.png" />
     <Content Include="Content\images\stats\clock.png" />
     <Content Include="Content\images\stats\digits-green.png" />
@@ -275,6 +282,8 @@
     <Content Include="Views\Statistics\Players.cshtml" />
     <Content Include="Views\Main\HowToPlay.cshtml" />
     <Content Include="Views\Main\Support.cshtml" />
+    <Content Include="Views\Messenger\Index.cshtml" />
+    <Content Include="Views\Messenger\MessengerLayout.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\styles\sass\" />

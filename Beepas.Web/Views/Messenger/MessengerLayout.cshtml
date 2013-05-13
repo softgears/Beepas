@@ -1,0 +1,23 @@
+﻿@using Beepas.Web.Classes.Extension
+@{
+    Layout = "~/Views/Shared/Layout.cshtml";
+}
+
+<div id="page-messenger">
+    <div id="messenger-wrapper">
+        <div id="messenger-header">
+            <div class="item" id="total-stats" onclick="window.location.href='/chat/'">
+                Общий канал
+            </div>
+            @if (ViewContext.IsAuthentificated())
+            {
+            <div class="item" id="player-stats" onclick="window.location.href='/chat/personal'">
+                Мои сообщения
+            </div>
+            }
+        </div>
+        <div id="messenger-content">
+            @RenderBody()
+        </div>
+    </div>
+</div>

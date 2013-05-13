@@ -1,0 +1,28 @@
+﻿@using Beepas.Web.Classes.Extension
+@model dynamic
+
+@{
+    ViewBag.Title = "Общий чат";
+    Layout = "MessengerLayout.cshtml";
+}
+
+@if (ViewContext.IsAuthentificated())
+{
+    <div id="messenger-form">
+        <div id="message-form-header">
+            <span id="only-wrapper" style="display: none">
+                <span class="close"></span>
+                <span class="private"></span>
+                <span class="only-for">Только для: <span id="only-for-name"></span></span>    
+            </span>
+            <span id="message-price">Стоимость сообщения: 10 монет</span>
+        </div>
+        <div id="message-content">
+            <textarea id="message-content-field" name="Content" maxlength="150"></textarea>
+            <div id="message-content-footer">
+                Осталось символов: <span id="chars-left">150</span>
+                <input type="submit" value="СКАЗАТЬ" id="message-submit"/>
+            </div>
+        </div>
+    </div>
+}
