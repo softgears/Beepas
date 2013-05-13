@@ -79,5 +79,15 @@ namespace Beepas.Web.Controllers
             return View();
         }
 
+        /// <summary>
+        /// Отображает форму технической поддержки
+        /// </summary>
+        /// <returns></returns>
+        [Route("support")]
+        public ActionResult Support()
+        {
+            return View();
+        }
+
     }
 }

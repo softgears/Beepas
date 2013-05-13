@@ -274,6 +274,7 @@
     <Content Include="Views\Statistics\StatsLayout.cshtml" />
     <Content Include="Views\Statistics\Players.cshtml" />
     <Content Include="Views\Main\HowToPlay.cshtml" />
+    <Content Include="Views\Main\Support.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\styles\sass\" />

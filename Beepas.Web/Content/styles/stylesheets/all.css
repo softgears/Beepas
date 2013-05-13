@@ -419,28 +419,28 @@ body #content #content-wrapper #content-inner #account-block #account #account-m
   background-color: #81cfff;
   border-radius: 15px;
 }
-/* line 315, ../sass/layout.sass */
-body #content #content-wrapper #content-inner #account-block #account #account-menu li:hover .bee, body #content #content-wrapper #content-inner #account-block #account #account-menu li.active .bee {
+/* line 316, ../sass/layout.sass */
+body #content #content-wrapper #content-inner #account-block #account #account-menu li:hover .bee {
   display: block;
 }
-/* line 319, ../sass/layout.sass */
+/* line 320, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li a {
   color: white;
   font-size: 15px;
 }
-/* line 327, ../sass/layout.sass */
+/* line 328, ../sass/layout.sass */
 body #footer {
   height: 122px;
   background: url(../../images/layout/footer.png) center top no-repeat;
 }
-/* line 331, ../sass/layout.sass */
+/* line 332, ../sass/layout.sass */
 body #footer #copyrights {
   padding-top: 40px;
   font-size: 15px;
   color: white;
   text-align: center;
 }
-/* line 337, ../sass/layout.sass */
+/* line 338, ../sass/layout.sass */
 body #dialog-overlay {
   display: none;
   position: fixed;
@@ -450,7 +450,7 @@ body #dialog-overlay {
   top: 0px;
   z-index: 99;
 }
-/* line 346, ../sass/layout.sass */
+/* line 347, ../sass/layout.sass */
 body #login-dialog {
   position: absolute;
   z-index: 100;
@@ -459,37 +459,37 @@ body #login-dialog {
   display: none;
   background: url(../../images/layout/loginbg.png) left top no-repeat;
 }
-/* line 354, ../sass/layout.sass */
+/* line 355, ../sass/layout.sass */
 body #login-dialog #login-wrapper {
   padding-left: 125px;
   padding-top: 186px;
 }
-/* line 358, ../sass/layout.sass */
+/* line 359, ../sass/layout.sass */
 body #login-dialog #login-wrapper .title {
   font-size: 14px;
   color: black;
   text-transform: uppercase;
 }
-/* line 363, ../sass/layout.sass */
+/* line 364, ../sass/layout.sass */
 body #login-dialog #login-wrapper .social {
   margin: 20px 0px;
 }
-/* line 366, ../sass/layout.sass */
+/* line 367, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field {
   margin-bottom: 20px;
 }
-/* line 369, ../sass/layout.sass */
+/* line 370, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field .field {
   margin-bottom: 5px;
   color: black;
   font-size: 13px;
 }
-/* line 375, ../sass/layout.sass */
+/* line 376, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field .editor input[type='text'], body #login-dialog #login-wrapper .field .editor input[type='password'] {
   border: 1px solid lightgrey;
   padding: 5px;
 }
-/* line 379, ../sass/layout.sass */
+/* line 380, ../sass/layout.sass */
 body #login-dialog #login-wrapper input[type='submit'] {
   border: 0;
   margin-top: 5px;
@@ -501,11 +501,11 @@ body #login-dialog #login-wrapper input[type='submit'] {
   vertical-align: top;
   margin-left: 25px;
 }
-/* line 390, ../sass/layout.sass */
+/* line 391, ../sass/layout.sass */
 body #login-dialog #login-wrapper input[type='submit']:hover {
   background: url(../../images/layout/loginbutton.png) left -35px no-repeat;
 }
-/* line 393, ../sass/layout.sass */
+/* line 394, ../sass/layout.sass */
 body #login-dialog #login-wrapper .register-action {
   display: inline-block;
   vertical-align: top;
@@ -517,24 +517,24 @@ body #login-dialog #login-wrapper .register-action {
   cursor: pointer;
   margin-left: 10px;
 }
-/* line 404, ../sass/layout.sass */
+/* line 405, ../sass/layout.sass */
 body #login-dialog #login-wrapper .register-action:hover {
   background: url(../../images/layout/regbutton.png) left -35px no-repeat;
 }
-/* line 407, ../sass/layout.sass */
+/* line 408, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper {
   margin-top: 20px;
   margin-left: 50px;
 }
-/* line 411, ../sass/layout.sass */
+/* line 412, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper a {
   color: #007ca8;
 }
-/* line 414, ../sass/layout.sass */
+/* line 415, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper a:hover {
   text-decoration: underline;
 }
-/* line 417, ../sass/layout.sass */
+/* line 418, ../sass/layout.sass */
 body #card-dialog {
   position: absolute;
   display: none;
@@ -629,21 +629,97 @@ body #card-dialog {
   top: 195px;
 }
 
-/* line 77, ../sass/main.sass */
+/* line 76, ../sass/main.sass */
+#feedback #feedback-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 356px;
+  padding-top: 35px;
+  font-size: 15px;
+  color: #1e1e1e;
+  line-height: 1.5;
+}
+/* line 85, ../sass/main.sass */
+#feedback #feedback-fields {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 89, ../sass/main.sass */
+#feedback #feedback-fields .field {
+  margin-bottom: 10px;
+}
+/* line 92, ../sass/main.sass */
+#feedback #feedback-fields .field .label {
+  font-size: 14px;
+  color: #51bcff;
+  margin-bottom: 5px;
+}
+/* line 98, ../sass/main.sass */
+#feedback #feedback-fields .field .editor input[type='text'] {
+  border: 2px solid #5bc0ff !important;
+  border-radius: 10px;
+  padding: 10px 5px;
+  width: 230px;
+}
+/* line 104, ../sass/main.sass */
+#feedback #feedback-fields .field .editor input[type='text']:focus {
+  background-color: #ffe149;
+}
+/* line 107, ../sass/main.sass */
+#feedback #textarea-field {
+  margin-top: 20px;
+}
+/* line 110, ../sass/main.sass */
+#feedback #textarea-field .label {
+  font-size: 14px;
+  color: #51bcff;
+  margin-bottom: 5px;
+}
+/* line 115, ../sass/main.sass */
+#feedback #textarea-field .editor {
+  background-color: #5dc1ff;
+  border: 1px solid #5dc1ff;
+  border-radius: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+/* line 122, ../sass/main.sass */
+#feedback #textarea-field .editor textarea {
+  border-radius: 5px;
+  padding: 5px;
+  height: 180px;
+  max-height: 180px;
+  min-height: 180px;
+  border: 0;
+  width: 608px;
+  min-width: 608px;
+  max-width: 608px;
+}
+/* line 133, ../sass/main.sass */
+#feedback #textarea-field .editor input[type='submit'] {
+  width: 150px;
+  height: 53px;
+  cursor: pointer;
+  background: url(../../images/main/submit-feedback.png);
+  border: 0;
+  margin: 10px;
+}
+
+/* line 148, ../sass/main.sass */
 .static-text p {
   margin: 5px 0px;
   line-height: 1.5;
   text-align: justify;
 }
-/* line 82, ../sass/main.sass */
+/* line 153, ../sass/main.sass */
 .static-text p a:hover {
   text-decoration: underline;
 }
-/* line 86, ../sass/main.sass */
+/* line 157, ../sass/main.sass */
 .static-text p.title {
   font-weight: bold;
 }
-/* line 89, ../sass/main.sass */
+/* line 160, ../sass/main.sass */
 .static-text p b {
   font-weight: bold;
 }

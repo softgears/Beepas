@@ -1,0 +1,45 @@
+﻿@model dynamic
+
+@{
+    ViewBag.Title = "Техническая поддержка";
+    Layout = "../Shared/CommonLayout.cshtml";
+}
+
+<div id="feedback">
+    <form action="/feedback" method="POST">
+        <div id="feedback-info">
+            Мы готовы выслушать все ваши вопросы и пожелания. Есть вопрос? Задайте его нам:
+        </div>
+        <div id="feedback-fields">
+            <div class="field">
+                <div class="label">
+                    Ваше имя:
+                </div>
+                <div class="editor">
+                    <input type="text" name="Name" id="name-field" />
+                </div>
+            </div>
+            <div class="field">
+                <div class="label">
+                    Ваш Email:
+                </div>
+                <div class="editor">
+                    <input type="text" name="Email" id="email-field" />
+                </div>
+            </div>
+        </div>
+        <div id="textarea-field">
+            <div class="label">
+                Текст вашего сообщения:
+            </div>
+            <div class="editor">
+                <textarea name="Content" id="content-field">
+    
+                </textarea>
+                <div style="text-align: right">
+                    <input type="submit" value=" " />
+                </div>
+            </div>
+        </div>
+    </form>
+</div>

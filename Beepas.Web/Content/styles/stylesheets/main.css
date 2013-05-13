@@ -84,21 +84,97 @@
   top: 195px;
 }
 
-/* line 77, ../sass/main.sass */
+/* line 76, ../sass/main.sass */
+#feedback #feedback-info {
+  display: inline-block;
+  vertical-align: top;
+  width: 356px;
+  padding-top: 35px;
+  font-size: 15px;
+  color: #1e1e1e;
+  line-height: 1.5;
+}
+/* line 85, ../sass/main.sass */
+#feedback #feedback-fields {
+  display: inline-block;
+  vertical-align: top;
+}
+/* line 89, ../sass/main.sass */
+#feedback #feedback-fields .field {
+  margin-bottom: 10px;
+}
+/* line 92, ../sass/main.sass */
+#feedback #feedback-fields .field .label {
+  font-size: 14px;
+  color: #51bcff;
+  margin-bottom: 5px;
+}
+/* line 98, ../sass/main.sass */
+#feedback #feedback-fields .field .editor input[type='text'] {
+  border: 2px solid #5bc0ff !important;
+  border-radius: 10px;
+  padding: 10px 5px;
+  width: 230px;
+}
+/* line 104, ../sass/main.sass */
+#feedback #feedback-fields .field .editor input[type='text']:focus {
+  background-color: #ffe149;
+}
+/* line 107, ../sass/main.sass */
+#feedback #textarea-field {
+  margin-top: 20px;
+}
+/* line 110, ../sass/main.sass */
+#feedback #textarea-field .label {
+  font-size: 14px;
+  color: #51bcff;
+  margin-bottom: 5px;
+}
+/* line 115, ../sass/main.sass */
+#feedback #textarea-field .editor {
+  background-color: #5dc1ff;
+  border: 1px solid #5dc1ff;
+  border-radius: 5px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+}
+/* line 122, ../sass/main.sass */
+#feedback #textarea-field .editor textarea {
+  border-radius: 5px;
+  padding: 5px;
+  height: 180px;
+  max-height: 180px;
+  min-height: 180px;
+  border: 0;
+  width: 608px;
+  min-width: 608px;
+  max-width: 608px;
+}
+/* line 133, ../sass/main.sass */
+#feedback #textarea-field .editor input[type='submit'] {
+  width: 150px;
+  height: 53px;
+  cursor: pointer;
+  background: url(../../images/main/submit-feedback.png);
+  border: 0;
+  margin: 10px;
+}
+
+/* line 148, ../sass/main.sass */
 .static-text p {
   margin: 5px 0px;
   line-height: 1.5;
   text-align: justify;
 }
-/* line 82, ../sass/main.sass */
+/* line 153, ../sass/main.sass */
 .static-text p a:hover {
   text-decoration: underline;
 }
-/* line 86, ../sass/main.sass */
+/* line 157, ../sass/main.sass */
 .static-text p.title {
   font-weight: bold;
 }
-/* line 89, ../sass/main.sass */
+/* line 160, ../sass/main.sass */
 .static-text p b {
   font-weight: bold;
 }
