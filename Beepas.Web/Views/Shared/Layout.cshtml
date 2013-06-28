@@ -43,32 +43,47 @@
                 @* Главное меню *@
                 <nav id="main-menu">
                     <ul>
-                        @if (!ViewContext.IsAuthentificated())
-                        {
-                        <li>
-                            <a href="/">Главная</a>
+                        <div class="switchbg"></div>
+                        <li class="switched">
+                            <a href="#">Игра</a>
                         </li>
-                        }
                         <li>
-                            <a href="/rules">Правила</a>
+                            <a href="#">Лотерея</a>
                         </li>
                         <li>
                             <a href="/faq">F.A.Q.</a>
                         </li>
                         <li>
-                            <a href="/stats">Статистика</a>
+                            <a href="/chat" class="yellow">Чат</a>
                         </li>
                         <li>
-                            <a href="/chat">Чат</a>
-                        </li>
-                        <li>
-                            <a href="/news">Новости</a>
+                            <a href="/news" class="yellow">Новости</a>
                         </li>
                         <li>
                             <a href="/support">Поддержка</a>
                         </li>
                     </ul>
                 </nav>
+                @* Подменю *@
+                <div id="sub-menu">
+                    <ul>
+                        <li>
+                            <a href="/">Главная</a>
+                        </li>
+                        <li>
+                            <a href="/info">Об игре</a>
+                        </li>
+                        <li>
+                            <a href="/rules">Правила</a>
+                        </li>
+                        <li>
+                            <a href="/how-to-play">Как играть</a>
+                        </li>
+                        <li>
+                            <a href="/stats">Статистика</a>
+                        </li>
+                    </ul>
+                </div>
                 @if (!ViewContext.IsAuthentificated())
                 {
                 @* Кнопка входа *@
@@ -87,6 +102,10 @@
                     
                 </div>    
                 }
+                @* Кнопка обратного отсчета *@
+                <div id="countdown">
+                    04:59
+                </div>
             </div>
         </header>
         @* Содержимое *@

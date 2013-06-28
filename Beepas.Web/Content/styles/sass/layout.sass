@@ -8,7 +8,7 @@ body
 		color: #3193ff
 
 	#header
-		height: 457px
+		height: 477px
 		background: url(../../images/layout/header.png) center top no-repeat
 
 		#header-content
@@ -67,14 +67,40 @@ body
 			#main-menu
 				position: absolute
 				width: auto
-				top: 377px
-				left: 390px
+				top: 372px
+				left: 385px
 
 				ul
+					position: relative
+
+					.switchbg
+						width: 137px
+						height: 40px
+						background: url(../../images/layout/switcherbg.png)
+						position: absolute
+						z-index: 99
+						left: -8px
+						top: -7px
+
+
 					li
 						display: inline-block
 						vertical-align: top
-						margin-right: 18px
+						margin-right: 8px
+						padding: 5px 5px
+						position: relative
+						z-index: 100
+
+						&.switched
+							background: #e9be00
+							background: -moz-linear-gradient(top,  #e9be00 0%, #db9500 100%)
+							background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#e9be00), color-stop(100%,#db9500))
+							background: -webkit-linear-gradient(top,  #e9be00 0%,#db9500 100%)
+							background: -o-linear-gradient(top,  #e9be00 0%,#db9500 100%)
+							background: -ms-linear-gradient(top,  #e9be00 0%,#db9500 100%)
+							background: linear-gradient(to bottom,  #e9be00 0%,#db9500 100%)
+							filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#e9be00', endColorstr='#db9500',GradientType=0 )
+							border-radius: 5px
 
 						a
 							color: white
@@ -82,6 +108,46 @@ body
 
 							&:hover
 								text-decoration: underline
+
+							&.yellow
+								color: #fff251
+								font-weight: bold
+
+			#sub-menu
+				position: absolute
+				width: auto
+				top: 419px
+				left: 355px
+
+				ul
+					display: inline-block
+					width: 513px
+					height: 35px
+					background: url(../../images/layout/submenu-bg.png) left -11px no-repeat
+					padding-top: 5px
+					padding-left: 15px
+
+					li
+						display: inline-block
+						vertical-align: top
+						margin-right: 10px
+						padding: 5px 10px
+						border-radius: 5px
+
+						&:hover
+							background-color: #d87e05
+
+						a
+							color: white
+							font-size: 15px
+
+							&:hover
+								text-decoration: none
+
+							&.yellow
+								color: #fff251
+								font-weight: bold
+
 
 			#login-button
 				position: absolute
@@ -118,6 +184,19 @@ body
 
 				&:hover
 					background: url(../../images/layout/money.png) left -48px no-repeat
+
+			#countdown
+				position: absolute
+				width: 110px
+				height: 41px
+				background: url(../../images/layout/clockbg.png)
+				line-height: 41px
+				color: #295673
+				font-size: 22px
+				text-align: center
+				left: 815px
+				top: 366px
+
 
 
 	#content
@@ -215,20 +294,33 @@ body
 						padding: 20px 25px
 						text-align: left
 
-						#profile-card
-							width: 30px
-							height: 21px
+						#profile-referals
+							width: 23px
+							height: 18px
 							cursor: pointer
-							background: url(../../images/layout/profile-card.png)
-
-						#profile-settings
-							height: 23px
-							width: 22px
-							cursor: pointer
-							background: url(../../images/layout/profile-settings.png)
+							background: url(../../images/layout/referals.png)
 
 							&:hover
-								background: url(../../images/layout/profile-settings-active.png) !important
+								background: url(../../images/layout/referals-active.png)
+
+						#profile-card
+							width: 18px
+							height: 19px
+							cursor: pointer
+							background: url(../../images/layout/profile.png)
+
+							&:hover
+								background: url(../../images/layout/profile-active.png)
+
+
+						#profile-settings
+							height: 21px
+							width: 20px
+							cursor: pointer
+							background: url(../../images/layout/settings.png)
+
+							&:hover
+								background: url(../../images/layout/settings-active.png) !important
 
 
 						.login

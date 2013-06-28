@@ -11,7 +11,7 @@ body a {
 }
 /* line 10, ../sass/layout.sass */
 body #header {
-  height: 457px;
+  height: 477px;
   background: url(../../images/layout/header.png) center top no-repeat;
 }
 /* line 14, ../sass/layout.sass */
@@ -78,25 +78,101 @@ body #header #header-content #bank-callout .value {
 body #header #header-content #main-menu {
   position: absolute;
   width: auto;
-  top: 377px;
-  left: 390px;
+  top: 372px;
+  left: 385px;
 }
-/* line 74, ../sass/layout.sass */
+/* line 73, ../sass/layout.sass */
+body #header #header-content #main-menu ul {
+  position: relative;
+}
+/* line 76, ../sass/layout.sass */
+body #header #header-content #main-menu ul .switchbg {
+  width: 137px;
+  height: 40px;
+  background: url(../../images/layout/switcherbg.png);
+  position: absolute;
+  z-index: 99;
+  left: -8px;
+  top: -7px;
+}
+/* line 86, ../sass/layout.sass */
 body #header #header-content #main-menu ul li {
   display: inline-block;
   vertical-align: top;
-  margin-right: 18px;
+  margin-right: 8px;
+  padding: 5px 5px;
+  position: relative;
+  z-index: 100;
 }
-/* line 79, ../sass/layout.sass */
+/* line 94, ../sass/layout.sass */
+body #header #header-content #main-menu ul li.switched {
+  background: #e9be00;
+  background: -moz-linear-gradient(top, #e9be00 0%, #db9500 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #e9be00), color-stop(100%, #db9500));
+  background: -webkit-linear-gradient(top, #e9be00 0%, #db9500 100%);
+  background: -o-linear-gradient(top, #e9be00 0%, #db9500 100%);
+  background: -ms-linear-gradient(top, #e9be00 0%, #db9500 100%);
+  background: linear-gradient(to bottom, #e9be00 0%, #db9500 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#e9be00', endColorstr='#db9500',GradientType=0 );
+  border-radius: 5px;
+}
+/* line 105, ../sass/layout.sass */
 body #header #header-content #main-menu ul li a {
   color: white;
   font-size: 15px;
 }
-/* line 83, ../sass/layout.sass */
+/* line 109, ../sass/layout.sass */
 body #header #header-content #main-menu ul li a:hover {
   text-decoration: underline;
 }
-/* line 86, ../sass/layout.sass */
+/* line 112, ../sass/layout.sass */
+body #header #header-content #main-menu ul li a.yellow {
+  color: #fff251;
+  font-weight: bold;
+}
+/* line 116, ../sass/layout.sass */
+body #header #header-content #sub-menu {
+  position: absolute;
+  width: auto;
+  top: 419px;
+  left: 355px;
+}
+/* line 122, ../sass/layout.sass */
+body #header #header-content #sub-menu ul {
+  display: inline-block;
+  width: 513px;
+  height: 35px;
+  background: url(../../images/layout/submenu-bg.png) left -11px no-repeat;
+  padding-top: 5px;
+  padding-left: 15px;
+}
+/* line 130, ../sass/layout.sass */
+body #header #header-content #sub-menu ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin-right: 10px;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+/* line 137, ../sass/layout.sass */
+body #header #header-content #sub-menu ul li:hover {
+  background-color: #d87e05;
+}
+/* line 140, ../sass/layout.sass */
+body #header #header-content #sub-menu ul li a {
+  color: white;
+  font-size: 15px;
+}
+/* line 144, ../sass/layout.sass */
+body #header #header-content #sub-menu ul li a:hover {
+  text-decoration: none;
+}
+/* line 147, ../sass/layout.sass */
+body #header #header-content #sub-menu ul li a.yellow {
+  color: #fff251;
+  font-weight: bold;
+}
+/* line 152, ../sass/layout.sass */
 body #header #header-content #login-button {
   position: absolute;
   width: 198px;
@@ -107,11 +183,11 @@ body #header #header-content #login-button {
   cursor: pointer;
   display: block;
 }
-/* line 96, ../sass/layout.sass */
+/* line 162, ../sass/layout.sass */
 body #header #header-content #login-button:hover {
   background: url(../../images/layout/login.png) left -60px no-repeat;
 }
-/* line 99, ../sass/layout.sass */
+/* line 165, ../sass/layout.sass */
 body #header #header-content #logout-button {
   position: absolute;
   width: 62px;
@@ -121,11 +197,11 @@ body #header #header-content #logout-button {
   left: 1085px;
   cursor: pointer;
 }
-/* line 107, ../sass/layout.sass */
+/* line 173, ../sass/layout.sass */
 body #header #header-content #logout-button:hover {
   background: url(../../images/layout/logout.png) left -61px no-repeat;
 }
-/* line 110, ../sass/layout.sass */
+/* line 176, ../sass/layout.sass */
 body #header #header-content #money-button {
   position: absolute;
   width: 157px;
@@ -135,16 +211,29 @@ body #header #header-content #money-button {
   left: 927px;
   cursor: pointer;
 }
-/* line 119, ../sass/layout.sass */
+/* line 185, ../sass/layout.sass */
 body #header #header-content #money-button:hover {
   background: url(../../images/layout/money.png) left -48px no-repeat;
 }
-/* line 125, ../sass/layout.sass */
+/* line 188, ../sass/layout.sass */
+body #header #header-content #countdown {
+  position: absolute;
+  width: 110px;
+  height: 41px;
+  background: url(../../images/layout/clockbg.png);
+  line-height: 41px;
+  color: #295673;
+  font-size: 22px;
+  text-align: center;
+  left: 815px;
+  top: 366px;
+}
+/* line 204, ../sass/layout.sass */
 body #content #content-wrapper {
   width: 1280px;
   margin: 0px auto;
 }
-/* line 129, ../sass/layout.sass */
+/* line 208, ../sass/layout.sass */
 body #content #content-wrapper #content-inner {
   width: 1000px;
   margin: 0px auto;
@@ -152,7 +241,7 @@ body #content #content-wrapper #content-inner {
   position: relative;
   top: -35px;
 }
-/* line 136, ../sass/layout.sass */
+/* line 215, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder {
   width: 620px;
   display: inline-block;
@@ -161,11 +250,11 @@ body #content #content-wrapper #content-inner #content-holder {
   margin-left: 55px;
   padding-top: 15px;
 }
-/* line 144, ../sass/layout.sass */
+/* line 223, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static {
   padding-top: 5px;
 }
-/* line 147, ../sass/layout.sass */
+/* line 226, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static #page-title {
   font-size: 22px;
   color: #295673;
@@ -174,30 +263,30 @@ body #content #content-wrapper #content-inner #content-holder #page-static #page
   border-bottom: 3px solid #ffeb4b;
   padding-top: 15px;
 }
-/* line 155, ../sass/layout.sass */
+/* line 234, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content {
   margin: 15px 0px;
 }
-/* line 158, ../sass/layout.sass */
+/* line 237, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content .field {
   margin-bottom: 15px;
 }
-/* line 161, ../sass/layout.sass */
+/* line 240, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content .field .label {
   margin-bottom: 5px;
 }
-/* line 165, ../sass/layout.sass */
+/* line 244, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content .field .editor input[type='text'], body #content #content-wrapper #content-inner #content-holder #page-static .page-content .field .editor input[type='password'] {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   padding: 3px;
   width: 250px;
 }
-/* line 170, ../sass/layout.sass */
+/* line 249, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content .field .editor label.error {
   color: red;
   margin-left: 5px;
 }
-/* line 174, ../sass/layout.sass */
+/* line 253, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #reg-submit {
   border: 0;
   margin-top: 5px;
@@ -207,27 +296,27 @@ body #content #content-wrapper #content-inner #content-holder #page-static .page
   cursor: pointer;
   margin-left: 10px;
 }
-/* line 183, ../sass/layout.sass */
+/* line 262, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #reg-submit:hover {
   background: url(../../images/layout/regbutton.png) left -35px no-repeat;
 }
-/* line 188, ../sass/layout.sass */
+/* line 267, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #page-shop b {
   font-weight: bold;
 }
-/* line 193, ../sass/layout.sass */
+/* line 272, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #page-shop ul li {
   margin: 5px 0px;
 }
-/* line 196, ../sass/layout.sass */
+/* line 275, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #page-shop ul a {
   color: #3193ff;
 }
-/* line 199, ../sass/layout.sass */
+/* line 278, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #content-holder #page-static .page-content #page-shop ul a:hover {
   text-decoration: underline;
 }
-/* line 204, ../sass/layout.sass */
+/* line 283, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block {
   display: inline-block;
   vertical-align: top;
@@ -238,47 +327,62 @@ body #content #content-wrapper #content-inner #account-block {
   background: url(../../images/layout/accontbg.png) left top no-repeat;
   margin-left: 28px;
 }
-/* line 214, ../sass/layout.sass */
+/* line 293, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account {
   padding: 20px 25px;
   text-align: left;
 }
-/* line 218, ../sass/layout.sass */
+/* line 297, ../sass/layout.sass */
+body #content #content-wrapper #content-inner #account-block #account #profile-referals {
+  width: 23px;
+  height: 18px;
+  cursor: pointer;
+  background: url(../../images/layout/referals.png);
+}
+/* line 303, ../sass/layout.sass */
+body #content #content-wrapper #content-inner #account-block #account #profile-referals:hover {
+  background: url(../../images/layout/referals-active.png);
+}
+/* line 306, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #profile-card {
-  width: 30px;
-  height: 21px;
+  width: 18px;
+  height: 19px;
   cursor: pointer;
-  background: url(../../images/layout/profile-card.png);
+  background: url(../../images/layout/profile.png);
 }
-/* line 224, ../sass/layout.sass */
+/* line 312, ../sass/layout.sass */
+body #content #content-wrapper #content-inner #account-block #account #profile-card:hover {
+  background: url(../../images/layout/profile-active.png);
+}
+/* line 316, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #profile-settings {
-  height: 23px;
-  width: 22px;
+  height: 21px;
+  width: 20px;
   cursor: pointer;
-  background: url(../../images/layout/profile-settings.png);
+  background: url(../../images/layout/settings.png);
 }
-/* line 230, ../sass/layout.sass */
+/* line 322, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #profile-settings:hover {
-  background: url(../../images/layout/profile-settings-active.png) !important;
+  background: url(../../images/layout/settings-active.png) !important;
 }
-/* line 234, ../sass/layout.sass */
+/* line 326, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .login {
   font-size: 30px;
   color: #fffd5c;
   text-align: center;
 }
-/* line 239, ../sass/layout.sass */
+/* line 331, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .position {
   margin-top: 10px;
   color: white;
   font-size: 12px;
   text-align: center;
 }
-/* line 245, ../sass/layout.sass */
+/* line 337, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .position b {
   font-weight: bold;
 }
-/* line 248, ../sass/layout.sass */
+/* line 340, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .avatar {
   display: inline-block;
   vertical-align: top;
@@ -292,13 +396,13 @@ body #content #content-wrapper #content-inner #account-block #account .avatar {
   background-color: white;
   margin-right: 7px;
 }
-/* line 261, ../sass/layout.sass */
+/* line 353, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .avatar img {
   width: 116px;
   height: auto;
   min-height: 116px;
 }
-/* line 268, ../sass/layout.sass */
+/* line 360, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .resources {
   display: inline-block;
   vertical-align: top;
@@ -308,36 +412,36 @@ body #content #content-wrapper #content-inner #account-block #account .resources
   color: #fffd5c;
   font-size: 15px;
 }
-/* line 277, ../sass/layout.sass */
+/* line 369, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .resources div {
   padding: 3px;
   padding-left: 32px;
   margin-bottom: 10px;
 }
-/* line 282, ../sass/layout.sass */
+/* line 374, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .resources .coins {
   background: url(../../images/layout/coins.png) left center no-repeat;
 }
-/* line 285, ../sass/layout.sass */
+/* line 377, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .resources .honey {
   background: url(../../images/layout/honey.png) left center no-repeat;
 }
-/* line 288, ../sass/layout.sass */
+/* line 380, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account .resources .bars {
   background: url(../../images/layout/bars.png) left center no-repeat;
 }
-/* line 293, ../sass/layout.sass */
+/* line 385, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu {
   clear: both;
   text-align: center;
   margin-top: 20px;
 }
-/* line 298, ../sass/layout.sass */
+/* line 390, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li {
   padding: 5px;
   position: relative;
 }
-/* line 302, ../sass/layout.sass */
+/* line 394, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li .bee {
   position: absolute;
   right: -10px;
@@ -347,33 +451,33 @@ body #content #content-wrapper #content-inner #account-block #account #account-m
   height: 63px;
   background: url(../../images/layout/accountbee.png) left top no-repeat;
 }
-/* line 311, ../sass/layout.sass */
+/* line 403, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li:hover, body #content #content-wrapper #content-inner #account-block #account #account-menu li.active {
   background-color: #81cfff;
   border-radius: 15px;
 }
-/* line 316, ../sass/layout.sass */
+/* line 408, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li:hover .bee {
   display: block;
 }
-/* line 320, ../sass/layout.sass */
+/* line 412, ../sass/layout.sass */
 body #content #content-wrapper #content-inner #account-block #account #account-menu li a {
   color: white;
   font-size: 15px;
 }
-/* line 328, ../sass/layout.sass */
+/* line 420, ../sass/layout.sass */
 body #footer {
   height: 122px;
   background: url(../../images/layout/footer.png) center top no-repeat;
 }
-/* line 332, ../sass/layout.sass */
+/* line 424, ../sass/layout.sass */
 body #footer #copyrights {
   padding-top: 40px;
   font-size: 15px;
   color: white;
   text-align: center;
 }
-/* line 338, ../sass/layout.sass */
+/* line 430, ../sass/layout.sass */
 body #dialog-overlay {
   display: none;
   position: fixed;
@@ -383,7 +487,7 @@ body #dialog-overlay {
   top: 0px;
   z-index: 99;
 }
-/* line 347, ../sass/layout.sass */
+/* line 439, ../sass/layout.sass */
 body #login-dialog {
   position: absolute;
   z-index: 100;
@@ -392,37 +496,37 @@ body #login-dialog {
   display: none;
   background: url(../../images/layout/loginbg.png) left top no-repeat;
 }
-/* line 355, ../sass/layout.sass */
+/* line 447, ../sass/layout.sass */
 body #login-dialog #login-wrapper {
   padding-left: 125px;
   padding-top: 186px;
 }
-/* line 359, ../sass/layout.sass */
+/* line 451, ../sass/layout.sass */
 body #login-dialog #login-wrapper .title {
   font-size: 14px;
   color: black;
   text-transform: uppercase;
 }
-/* line 364, ../sass/layout.sass */
+/* line 456, ../sass/layout.sass */
 body #login-dialog #login-wrapper .social {
   margin: 20px 0px;
 }
-/* line 367, ../sass/layout.sass */
+/* line 459, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field {
   margin-bottom: 20px;
 }
-/* line 370, ../sass/layout.sass */
+/* line 462, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field .field {
   margin-bottom: 5px;
   color: black;
   font-size: 13px;
 }
-/* line 376, ../sass/layout.sass */
+/* line 468, ../sass/layout.sass */
 body #login-dialog #login-wrapper .field .editor input[type='text'], body #login-dialog #login-wrapper .field .editor input[type='password'] {
-  border: 1px solid lightgrey;
+  border: 1px solid lightgray;
   padding: 5px;
 }
-/* line 380, ../sass/layout.sass */
+/* line 472, ../sass/layout.sass */
 body #login-dialog #login-wrapper input[type='submit'] {
   border: 0;
   margin-top: 5px;
@@ -434,11 +538,11 @@ body #login-dialog #login-wrapper input[type='submit'] {
   vertical-align: top;
   margin-left: 25px;
 }
-/* line 391, ../sass/layout.sass */
+/* line 483, ../sass/layout.sass */
 body #login-dialog #login-wrapper input[type='submit']:hover {
   background: url(../../images/layout/loginbutton.png) left -35px no-repeat;
 }
-/* line 394, ../sass/layout.sass */
+/* line 486, ../sass/layout.sass */
 body #login-dialog #login-wrapper .register-action {
   display: inline-block;
   vertical-align: top;
@@ -450,24 +554,24 @@ body #login-dialog #login-wrapper .register-action {
   cursor: pointer;
   margin-left: 10px;
 }
-/* line 405, ../sass/layout.sass */
+/* line 497, ../sass/layout.sass */
 body #login-dialog #login-wrapper .register-action:hover {
   background: url(../../images/layout/regbutton.png) left -35px no-repeat;
 }
-/* line 408, ../sass/layout.sass */
+/* line 500, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper {
   margin-top: 20px;
   margin-left: 50px;
 }
-/* line 412, ../sass/layout.sass */
+/* line 504, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper a {
   color: #007ca8;
 }
-/* line 415, ../sass/layout.sass */
+/* line 507, ../sass/layout.sass */
 body #login-dialog #login-wrapper #restore-wrapper a:hover {
   text-decoration: underline;
 }
-/* line 418, ../sass/layout.sass */
+/* line 510, ../sass/layout.sass */
 body #card-dialog {
   position: absolute;
   display: none;

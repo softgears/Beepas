@@ -192,6 +192,7 @@
     <Content Include="Content\images\layout\bars.png" />
     <Content Include="Content\images\layout\bee.png" />
     <Content Include="Content\images\layout\bg.jpg" />
+    <Content Include="Content\images\layout\clockbg.png" />
     <Content Include="Content\images\layout\coins.png" />
     <Content Include="Content\images\layout\footer.png" />
     <Content Include="Content\images\layout\header.png" />
@@ -202,10 +203,18 @@
     <Content Include="Content\images\layout\logout.png" />
     <Content Include="Content\images\layout\money.png" />
     <Content Include="Content\images\layout\player-callout.png" />
+    <Content Include="Content\images\layout\profile-active.png" />
     <Content Include="Content\images\layout\profile-card.png" />
     <Content Include="Content\images\layout\profile-settings-active.png" />
     <Content Include="Content\images\layout\profile-settings.png" />
+    <Content Include="Content\images\layout\profile.png" />
+    <Content Include="Content\images\layout\referals-active.png" />
+    <Content Include="Content\images\layout\referals.png" />
     <Content Include="Content\images\layout\regbutton.png" />
+    <Content Include="Content\images\layout\settings-active.png" />
+    <Content Include="Content\images\layout\settings.png" />
+    <Content Include="Content\images\layout\submenu-bg.png" />
+    <Content Include="Content\images\layout\switcherbg.png" />
     <Content Include="Content\images\layout\tmpavatar.png" />
     <Content Include="Content\images\layout\uley.png" />
     <Content Include="Content\images\main\how-active.png" />
